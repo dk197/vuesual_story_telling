@@ -19,7 +19,7 @@ export default {
 }
 
 .section {
-    padding: 5% 10% 0 500px;
+    padding-left: 500px;
     position: relative;
 }
 
