@@ -47,13 +47,9 @@ export default {
       return {
         options: {
           licenseKey: 'YOUR_KEY_HERE',
-<<<<<<< HEAD
           navigation: true,
           anchors: ['Home', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10', 'page11', 'Footer'],
           sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab', '#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6',]
-=======
-          sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
->>>>>>> 577153302f16f5a47860f0b1546d451ecb9e0db0
         }
       }
     }
