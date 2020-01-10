@@ -3,7 +3,15 @@
              <Header></Header>
             <SectionA></SectionA>
             <SectionB></SectionB>
-            <Test></Test>
+            <SectionC></SectionC>
+            <SectionD></SectionD>
+            <SectionE></SectionE>
+            <SectionF></SectionF>
+            <SectionE></SectionE>
+            <SectionF></SectionF>
+            <SectionG></SectionG>
+            <SectionH></SectionH>
+            <Footer></Footer>
         </full-page> 
 </template>
 
@@ -12,8 +20,8 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import SectionA from "./components/sections/SectionA.vue";
 import SectionB from "./components/sections/SectionB.vue";
-import Map from "./components/charts/map";
-import Altersverteilung from './components/charts/Altersverteilung';
+// import Map from "./components/charts/map";
+// import Altersverteilung from './components/charts/Altersverteilung';
 import SectionC from "./components/sections/SectionC.vue";
 import SectionD from "./components/sections/SectionD.vue";
 import SectionE from "./components/sections/SectionE.vue";
@@ -27,7 +35,12 @@ export default {
         Footer,
         SectionA,
         SectionB,
-        Test
+        SectionC,
+        SectionD,
+        SectionE,
+        SectionF,
+        SectionG,
+        SectionH,
     },
     name: 'app',
     data () {
