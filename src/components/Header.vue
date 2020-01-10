@@ -72,7 +72,7 @@ function animateValue(id, start, end, duration) {
 window.onload = function () {
         //console.log('lol');
         
-        animateValue('counting-number', 0, 14225, 3000);
+        animateValue('counting-number', 0, 14225, 2500);
     }
 
 
