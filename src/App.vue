@@ -1,29 +1,50 @@
 <template>
-    <div>
+    <div id="page">
         <Header></Header>
         <SectionA></SectionA>
         <SectionB></SectionB>
-        <Test></Test>
+        <SectionC></SectionC>
+        <SectionD></SectionD>
+        <SectionE></SectionE>
+        <SectionF></SectionF>
+        <SectionG></SectionG>
+        <!-- <Test></Test> -->
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import SectionA from "./components/sections/SectionA.vue";
 import SectionB from "./components/sections/SectionB.vue";
-import Test from "./components/charts/test";
+import SectionC from "./components/sections/SectionC.vue";
+import SectionD from "./components/sections/SectionD.vue";
+import SectionE from "./components/sections/SectionE.vue";
+import SectionF from "./components/sections/SectionF.vue";
+import SectionG from "./components/sections/SectionG.vue";
+// import Test from "./components/charts/test";
 
 export default {
     components: {
         Header,
+        Footer,
         SectionA,
         SectionB,
-        Test
+        SectionC,
+        SectionD,
+        SectionE,
+        SectionF,
+        SectionG,
+        // Test
     }
 };
 </script>
 
 <style>
+#page {
+  /* position: relative; */
+}
 body {
     background-color: white;
     margin: 0 !important;

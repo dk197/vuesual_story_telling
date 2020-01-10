@@ -6,7 +6,7 @@
             <p class="header-text">Straftaten in 3 Jahren</p>
             <p class="header-title">Clankriminalität in NRW</p>
             <p class="header-credit">Semesterarbeit Multimediales Informationsdesign
-                des Fachbereiches Onlinemedien</p>
+                des Fachbereiches Onlinemedien 2020</p>
             <img class="header-logo" src="../assets/logo.svg">
         </div>
         <img class="banner" src="../assets/header.png">
@@ -24,6 +24,7 @@ export default {
 
 .header {
     height: 100vh;
+    position: relative;
     overflow: hidden;
 }
 
@@ -74,7 +75,7 @@ export default {
 .overlay {
     position: absolute;
     width: 52%;
-    height: 100%;
+    height: 100vh;
     background-color: #0D1321;
     top: 0;
     left: 0;
