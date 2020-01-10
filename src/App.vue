@@ -3,7 +3,8 @@
         <Header></Header>
         <SectionA></SectionA>
         <SectionB></SectionB>
-        <Test></Test>
+        <Map></Map>
+        <Altersverteilung></Altersverteilung>
     </div>
 </template>
 
@@ -11,14 +12,16 @@
 import Header from "./components/Header.vue";
 import SectionA from "./components/sections/SectionA.vue";
 import SectionB from "./components/sections/SectionB.vue";
-import Test from "./components/charts/test";
+import Map from "./components/charts/map";
+import Altersverteilung from './components/charts/Altersverteilung';
 
 export default {
     components: {
         Header,
         SectionA,
         SectionB,
-        Test
+        Map,
+        Altersverteilung
     }
 };
 </script>
