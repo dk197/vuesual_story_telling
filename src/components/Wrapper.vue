@@ -1,10 +1,8 @@
 <template>
-    <div id="fullpage">
         <div class="section">
             <div class="shape"> </div>
             <slot></slot>
         </div>
-    </div>
 </template>
 
 <script>

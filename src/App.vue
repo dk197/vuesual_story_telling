@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <Header></Header>
-        <SectionA></SectionA>
-        <SectionB></SectionB>
-        <Test></Test>
-    </div>
+        <full-page :options="options" id="fullpage">
+             <Header></Header>
+            <SectionA></SectionA>
+            <SectionB></SectionB>
+            <Test></Test>
+        </full-page> 
 </template>
 
 <script>
@@ -19,6 +19,15 @@ export default {
         SectionA,
         SectionB,
         Test
+    },
+    name: 'app',
+    data () {
+      return {
+        options: {
+          licenseKey: 'YOUR_KEY_HERE',
+          sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
+        }
+      }
     }
 };
 </script>
