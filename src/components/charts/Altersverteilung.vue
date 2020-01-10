@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import DataParser from "../../mixins/dataParserMixin";
+import { DataParserMixin } from "../../mixins/dataParserMixin";
 export default {
-    mixins: [DataParser],
+    mixins: [DataParserMixin],
     data() {
         return {
             chartOptions: {
@@ -18,7 +18,11 @@ export default {
         };
     },
     mounted() {
-        DataParser.getDataFromCsv('altersverteilung')
+        // console.log(this.getDataFromCsv('altersverteilung'))
+        this.getDataFromCsv('abb1_StraftatenUndTatverdächtige - Tabellenblatt1.csv').then(function(data) {
+            console.log(data);
+            
+        })
     }
 };
 </script>
