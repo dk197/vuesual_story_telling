@@ -9,13 +9,22 @@
 
 <script>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import SectionA from "./components/sections/SectionA.vue";
 import SectionB from "./components/sections/SectionB.vue";
-import Test from "./components/charts/test";
+import Map from "./components/charts/map";
+import Altersverteilung from './components/charts/Altersverteilung';
+import SectionC from "./components/sections/SectionC.vue";
+import SectionD from "./components/sections/SectionD.vue";
+import SectionE from "./components/sections/SectionE.vue";
+import SectionF from "./components/sections/SectionF.vue";
+import SectionG from "./components/sections/SectionG.vue";
+import SectionH from "./components/sections/SectionH.vue";
 
 export default {
     components: {
         Header,
+        Footer,
         SectionA,
         SectionB,
         Test
@@ -33,6 +42,9 @@ export default {
 </script>
 
 <style>
+#page {
+  /* position: relative; */
+}
 body {
     background-color: white;
     margin: 0 !important;
