@@ -47,7 +47,6 @@ export default {
       return {
         options: {
           licenseKey: 'YOUR_KEY_HERE',
-          navigation: true,
           sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab']
         }
       }
@@ -72,5 +71,9 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     width: 550px;
+}
+
+.fp-section {
+  position: relative;
 }
 </style>
