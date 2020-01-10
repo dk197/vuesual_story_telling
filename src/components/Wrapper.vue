@@ -1,9 +1,7 @@
 <template>
-    <div id="fullpage">
-        <div class="section">
-            <div class="shape"> </div>
-            <slot></slot>
-        </div>
+    <div class="section">
+        <div class="shape"> </div>
+        <slot></slot>
     </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
 }
 
 .section {
-    padding: 5% 10% 0 500px;
+    padding-left: 500px;
     position: relative;
 }
 

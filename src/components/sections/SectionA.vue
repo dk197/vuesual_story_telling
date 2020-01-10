@@ -1,5 +1,4 @@
 <template>
-    <div>
     <Wrapper>
 	<h2 class="heading">Die Studie</h2>
              <div class="text">
@@ -32,7 +31,6 @@
                 </div>
             </div>
     </Wrapper>
-    </div>
  
 </template>
 

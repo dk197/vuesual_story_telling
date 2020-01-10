@@ -1,12 +1,12 @@
 <template>
-    <div class="header">
+    <div class="header section">
         <div class="overlay"></div>
         <div class="header-content">
             <p class="header-number" id="counting-number">{{counter}}</p>
             <p class="header-text">Straftaten in 3 Jahren</p>
             <p class="header-title">Clankriminalität in NRW</p>
             <p class="header-credit">Semesterarbeit Multimediales Informationsdesign
-                des Fachbereiches Onlinemedien</p>
+                des Fachbereiches Onlinemedien 2020</p>
             <img class="header-logo" src="../assets/logo.svg">
         </div>
         <img class="banner" src="../assets/header.png">
@@ -82,6 +82,7 @@ window.onload = function () {
 
 .header {
     height: 100vh;
+    position: relative;
     overflow: hidden;
 }
 
@@ -132,7 +133,7 @@ window.onload = function () {
 .overlay {
     position: absolute;
     width: 52%;
-    height: 100%;
+    height: 100vh;
     background-color: #0D1321;
     top: 0;
     left: 0;

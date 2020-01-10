@@ -2,8 +2,7 @@
     <Wrapper>
 	<h2 class="heading">Die Clans</h2>
             
-    </Wrapper>
- 
+    </Wrapper> 
 </template>
 
 <script>
