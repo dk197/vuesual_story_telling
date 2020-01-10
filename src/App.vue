@@ -8,6 +8,7 @@
         <SectionE></SectionE>
         <SectionF></SectionF>
         <SectionG></SectionG>
+        <SectionH></SectionH>
         <!-- <Test></Test> -->
         <Footer></Footer>
     </div>
@@ -23,6 +24,7 @@ import SectionD from "./components/sections/SectionD.vue";
 import SectionE from "./components/sections/SectionE.vue";
 import SectionF from "./components/sections/SectionF.vue";
 import SectionG from "./components/sections/SectionG.vue";
+import SectionH from "./components/sections/SectionH.vue";
 // import Test from "./components/charts/test";
 
 export default {
@@ -36,6 +38,7 @@ export default {
         SectionE,
         SectionF,
         SectionG,
+        SectionH,
         // Test
     }
 };
