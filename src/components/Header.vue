@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header section">
         <div class="overlay"></div>
         <div class="header-content">
             <p class="header-number">14.225</p>

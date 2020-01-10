@@ -1,8 +1,8 @@
 <template>
-        <div class="section">
-            <div class="shape"> </div>
-            <slot></slot>
-        </div>
+    <div class="section">
+        <div class="shape"> </div>
+        <slot></slot>
+    </div>
 </template>
 
 <script>

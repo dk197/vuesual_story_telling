@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer section">
         <div class="overlay"></div>
         <div class="footer-content">
             <p class="footer-title">Clankriminalität in NRW</p>
