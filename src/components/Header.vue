@@ -128,6 +128,7 @@ window.onload = function () {
 
 .banner {
     width: 100%;
+    height: 100%;
 }
 
 .overlay {
