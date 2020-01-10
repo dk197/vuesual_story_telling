@@ -20,6 +20,7 @@ export default {
 
 .section {
     padding-left: 500px;
+    padding-right: 10%;
     position: relative;
 }
 
