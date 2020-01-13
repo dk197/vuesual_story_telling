@@ -1,14 +1,14 @@
 <template>
     <div class="hexagons" style="float: left">
-        <Honeycomb :clan="'Clan O'" :anzahlStraftaten="'1738'"></Honeycomb>
-        <Honeycomb :clan="'Clan E'" :anzahlStraftaten="'1017'"></Honeycomb>
-        <Honeycomb :clan="'Clan K'" :anzahlStraftaten="'680'"></Honeycomb>
-        <Honeycomb :clan="'Clan S'" :anzahlStraftaten="'585'"></Honeycomb>
-        <Honeycomb :clan="'Clan Y'" :anzahlStraftaten="'481'"></Honeycomb>
-        <Honeycomb :clan="'Clan I'" :anzahlStraftaten="'473'"></Honeycomb>
-        <Honeycomb :clan="'Clan F'" :anzahlStraftaten="'459'"></Honeycomb>
-        <Honeycomb :clan="'Clan M'" :anzahlStraftaten="'455'"></Honeycomb>
-        <Honeycomb :clan="'Clan T'" :anzahlStraftaten="'409'"></Honeycomb>
+        <Honeycomb :clan="'Clan O'" :anzahlStraftaten="'1738'" :scaling="'1.2'"></Honeycomb>
+        <Honeycomb :clan="'Clan E'" :anzahlStraftaten="'1017'" :scaling="'0.78'"></Honeycomb>
+        <Honeycomb :clan="'Clan K'" :anzahlStraftaten="'680'" :scaling="'0.59'"></Honeycomb>
+        <Honeycomb :clan="'Clan S'" :anzahlStraftaten="'585'" :scaling="'0.53'"></Honeycomb>
+        <Honeycomb :clan="'Clan Y'" :anzahlStraftaten="'481'" :scaling="'0.51'"></Honeycomb>
+        <Honeycomb :clan="'Clan I'" :anzahlStraftaten="'473'" :scaling="'0.47'"></Honeycomb>
+        <Honeycomb :clan="'Clan F'" :anzahlStraftaten="'459'" :scaling="'0.46'"></Honeycomb>
+        <Honeycomb :clan="'Clan M'" :anzahlStraftaten="'455'" :scaling="'0.46'"></Honeycomb>
+        <Honeycomb :clan="'Clan T'" :anzahlStraftaten="'409'" :scaling="'0.43'"></Honeycomb>
     </div>
 </template>
 

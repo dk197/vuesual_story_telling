@@ -1,5 +1,5 @@
 <template>
-    <div class="hexagon-holder flip-container">
+    <div class="hexagon-holder flip-container" :style="{ transform: 'scale(' + scaling + ') rotate(90deg)' }">
         <div class="flipper">
             <div class="front">
                 <div class="hexagon-overlay">
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-    props: ["width", "height", "clan", "anzahlStraftaten"]
+    props: ["scaling", "clan", "anzahlStraftaten"]
 };
 </script>
 
@@ -99,7 +99,6 @@ export default {
     display: inline-block;
     letter-spacing: 0;
     font-size: 0;
-    transform: rotate(90deg)
 }
 
 .hexagon {
@@ -127,7 +126,7 @@ export default {
     transform: scaleY(0.5774) rotate(-45deg);
     background: inherit;
     left: 32.1px;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden; */
 }
 
 /*counter transform the bg image on the caps*/
