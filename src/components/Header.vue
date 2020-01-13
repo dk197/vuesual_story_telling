@@ -1,8 +1,8 @@
 <template>
-    <div class="header">
+    <div class="header section">
         <div class="overlay"></div>
         <div class="header-content">
-            <p class="header-number">14.225</p>
+            <p class="header-number" id="counting-number">{{counter}}</p>
             <p class="header-text">Straftaten in 3 Jahren</p>
             <p class="header-title">Clankriminalität in NRW</p>
             <p class="header-credit">Semesterarbeit Multimediales Informationsdesign
@@ -16,8 +16,66 @@
 
 <script>
 export default {
-	
+    data(){
+        return {
+            counter: 1
+        }
+    },
+    created(){
+        //this.animateValue()
+    },
+    methods:{
+        // animateValue(){
+        //     setInterval(function(){
+        //         alert(this.counter);
+        //         this.counter = this.counter + 1;    
+        //     },5)
+        //     //setTimeout(function(){ alert("Hello"); }, 3000);
+
+        // }
+
+    }
 };
+
+function animateValue(id, start, end, duration) {
+    // assumes integer values for start and end
+    
+    var obj = document.getElementById(id);
+    var range = end - start;
+    // no timer shorter than 50ms (not really visible any way)
+    var minTimer = 50;
+    // calc step time to show all interediate values
+    var stepTime = Math.abs(Math.floor(duration / range));
+    
+    // never go below minTimer
+    stepTime = Math.max(stepTime, minTimer);
+    
+    // get current time and calculate desired end time
+    var startTime = new Date().getTime();
+    var endTime = startTime + duration;
+    var timer;
+  
+    function run() {
+        var now = new Date().getTime();
+        var remaining = Math.max((endTime - now) / duration, 0);
+        var value = Math.round(end - (remaining * range));
+        obj.innerHTML = value;
+        if (value == end) {
+            clearInterval(timer);
+        }
+    }
+    
+    timer = setInterval(run, stepTime);
+    run();
+}
+
+window.onload = function () {
+        //console.log('lol');
+        
+        animateValue('counting-number', 0, 14225, 2500);
+    }
+
+
 </script>
 
 <style scoped>
@@ -70,6 +128,7 @@ export default {
 
 .banner {
     width: 100%;
+    height: 100%;
 }
 
 .overlay {
