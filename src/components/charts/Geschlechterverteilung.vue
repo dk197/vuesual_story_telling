@@ -20,11 +20,13 @@ export default {
                     data: [
                         {
                             name: 'männlich',
-                            y: 80
+                            y: 80,
+                            color: '#B70404'
                         },
                         {
                             name: 'weiblich',
-                            y: 20
+                            y: 20,
+                            color: '#3E3E3E'
                         }
                     ]
                 }]
