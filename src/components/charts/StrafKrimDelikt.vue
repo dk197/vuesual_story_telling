@@ -17,12 +17,13 @@ export default {
                     categories: ['Clan O','Clan E', 'Clan A', 'Clan K', 'Clan S', 'Clan Y', 'Clan I', 'Clan F', 'Clan M', 'Clan T']
                 },
                 yAxis: {
-                    categories: ['Antragsdelikte', 'Ausländerrecht', 'Betrugs- und Fälschungsdelikte', 'Eigentumsdelikte', 'Rohheitsdelikte', 'Politisch motivierte Delikte', 'Rauschgiftdelikte', 'Sexualkriminalität', 'Sonstige Kriminalität', 'Steuer- und Zolldelikte', 'Waffenrecht', 'Wirtschaftskriminalität']
+                    categories: ['Antragsdelikte', 'Ausländerrecht', 'Betrugs- und Fälschungsdelikte', 'Eigentumsdelikte', 'Rohheitsdelikte', 'Politisch motivierte Delikte', 'Rauschgiftdelikte', 'Sexualkriminalität', 'Sonstige Kriminalität', 'Steuer- und Zolldelikte', 'Waffenrecht', 'Wirtschaftskriminalität'],
+                    title: null
                 },
                 colorAxis: {
                     min: 0,
-                    minColor: '#ffffff',
-                    maxColor: '#b70404'
+                    minColor: '#F2EAEA',
+                    maxColor: '#700101'
                 },
                 series: [
                     {
@@ -37,7 +38,14 @@ export default {
                             [7,0,42],[7,1,0],[7,2,107],[7,3,70],[7,4,183],[7,5,1],[7,6,16],[7,7,4],[7,8,33],[7,9,0],[7,10,2],[7,11,1],
                             [8,0,25],[8,1,11],[8,2,81],[8,3,87],[8,4,196],[8,5,1],[8,6,24],[8,7,8],[8,8,17],[8,9,2],[8,10,2],[8,11,1],
                             [9,0,29],[9,1,0],[9,2,86],[9,3,48],[9,4,170],[9,5,1],[9,6,58],[9,7,3],[9,8,10],[9,9,0],[9,10,3],[9,11,1],
-                        ]
+                        ],
+                        dataLabels: {
+                            enabled: true,
+                            color: '#3E3E3E',
+                            style: {
+                                textOutline: false 
+                            }
+                        }
                     }
                 ]
             }
