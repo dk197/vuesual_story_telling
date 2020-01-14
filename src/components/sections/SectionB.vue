@@ -1,17 +1,19 @@
 <template>
     <Wrapper>
-	<h2 class="heading">Die Clans</h2>
-            
+        <!-- <h2 class="heading">Die Clans</h2> -->
+        <Honeycombs></Honeycombs>
     </Wrapper>
  
 </template>
 
 <script>
 import Wrapper from "../Wrapper.vue";
+import Honeycombs from '../charts/Honeycombs'
 
 export default {
     components: {
-      Wrapper
+      Wrapper,
+      Honeycombs
     }
 };
 </script>

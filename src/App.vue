@@ -60,9 +60,9 @@ export default {
 </script>
 
 <style>
-#page {
+/* #page { */
   /* position: relative; */
-}
+/* } */
 body {
     background-color: white;
     margin: 0 !important;

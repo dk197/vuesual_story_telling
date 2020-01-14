@@ -1,16 +1,19 @@
 import Papa from 'papaparse'
-export default {
-    computed: {
+export const DataParserMixin = {
+    methods: {
         getDataFromCsv(filename) {
+            console.log(filename);
             return new Promise((resolve) => {
                 Papa.parse('../../data/' + filename, {
                     header: true,
                     download: true,
                     dynamicTyping: true,
                     complete: function(results) {
+                        console.log(results);
                         const data = results.data
-                        const xdata = this.parseData(data)
-                        resolve(xdata)
+                        resolve(data)
+                        // const xdata = parseData(data)
+                        // resolve(xdata)
                     }
                 });
             })
