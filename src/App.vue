@@ -48,8 +48,11 @@ export default {
         options: {
           licenseKey: 'YOUR_KEY_HERE',
           navigation: true,
+          navigationPosition: 'left',
+          navigationTooltips: ['', 'Die Studie', 'Die Clans', 'SectionC', 'SectionD', 'SectionE', 'SectionF', 'SectionG', 'SectionH', ''],
+          showActiveTooltip: true,
           anchors: ['Home', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10', 'page11', 'Footer'],
-          sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab', '#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6',]
+          // sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab', '#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6',]
         }
       }
     }
