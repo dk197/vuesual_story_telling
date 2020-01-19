@@ -72,7 +72,7 @@ body {
 
 .heading {
     font-family: "Jost";
-    font-size: 100px;
+    font-size: 70px;
     text-transform: uppercase;
     font-weight: bold;
     width: 550px;
@@ -80,6 +80,7 @@ body {
 
 .fp-section {
   position: relative;
+  height: 100vh;
 }
 
 .fp-tableCell {
