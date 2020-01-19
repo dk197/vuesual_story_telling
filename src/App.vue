@@ -81,4 +81,41 @@ body {
 .fp-section {
   position: relative;
 }
+
+.fp-tableCell {
+  vertical-align: top;
+}
+
+#fp-nav ul li {
+  width: 25px;
+  height: 25px;
+} 
+
+#fp-nav ul li a span, #fp-nav ul li a.active span {
+  height: 20px;
+  width: 20px;
+  margin: -10px 0 0 -10px;
+  background-color: white;
+}
+
+#fp-nav ul li:hover {
+  height: 25px;
+  width: 25px;
+}
+
+#fp-nav ul li:hover a span, #fp-nav ul li:hover a.active span{
+  height: 20px;
+  width: 20px;
+  margin: -10px 0 0 -10px;
+}
+
+#fp-nav ul li .fp-tooltip.fp-left {
+  left: 33px;
+  top: 2px;
+  font-size: 18px;
+}
+
+.fp-viewing-Home > #fp-nav {
+  display: none;
+}
 </style>

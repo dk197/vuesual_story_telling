@@ -19,8 +19,8 @@ export default {
 }
 
 .section {
-    padding-left: 500px;
-    padding-right: 10%;
+    padding-right: 100px;
+    padding-left: 400px;
     position: relative;
 }
 
@@ -28,7 +28,7 @@ export default {
     position: absolute;
     left: 0;
     top:0;
-    width: 20%;
+    width: 300px;
     height: 100vh;
     background-color: #0D1321;
 }

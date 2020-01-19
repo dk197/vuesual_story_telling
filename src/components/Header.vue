@@ -2,12 +2,15 @@
     <div class="header section">
         <div class="overlay"></div>
         <div class="header-content">
-            <p class="header-number" id="counting-number">{{counter}}</p>
-            <p class="header-text">Straftaten in 3 Jahren</p>
             <p class="header-title">Clankriminalität in NRW</p>
             <p class="header-credit">Semesterarbeit Multimediales Informationsdesign
                 des Fachbereiches Onlinemedien 2020</p>
             <img class="header-logo" src="../assets/logo.svg">
+        </div>
+         <div class="overlay2"></div>
+        <div class="header-content2">
+            <p class="header-number" id="counting-number">{{counter}}</p>
+            <p class="header-text">Straftaten in 3 Jahren</p>
         </div>
         <img class="banner" src="../assets/header.png">
     </div>
@@ -90,30 +93,40 @@ window.onload = function () {
 .header-content {
     position: absolute;
     color: white;
-    left: 4%;
+    left: 45px;
     top: 10%;
     font-family: 'Jost';
 }
 
+.header-content2 {
+    position: absolute;
+    color: white;
+    right: 15%;
+    top: 360px;;
+    font-family: 'Jost';
+}
+
 .header-number {
-    font-size: 120px;
-    font-weight: bold;
-    margin-top: 5%;
+    font-size: 100px;
+    font-weight: medium;
+    margin: 0;
 }
 
 .header-text {
-    font-size: 50px;
-    margin-top: -35%;
+    font-size: 30px;
+    margin-top: -10%;
+    font-weight: 300;
 }
 
 .header-title {
     font-size: 80px;
-    width: 400px;
+    width: 500px;
     margin-top: 10%;
+    font-weight: bold;
 }
 
 .header-credit {
-    margin-top: 40%;
+    margin-top: 50%;
     font-size: 18px;
     width: 400px;
 }
@@ -133,7 +146,7 @@ window.onload = function () {
 
 .overlay {
     position: absolute;
-    width: 52%;
+    width: 54%;
     height: 100vh;
     background-color: #0D1321;
     top: 0;
@@ -144,5 +157,24 @@ window.onload = function () {
     border-bottom-left-radius: 0;
     right: auto;
     transform-origin: top left;
+}
+
+.overlay2 {
+    position: absolute;
+    width: 50%;
+    height: 230px;
+    background-color: #0D1321;
+    opacity: 0.75;
+    top: 340px;
+    right: -10%;
+    transform: skewX(-32deg);
+    transform-origin: top left;
+    /* z-index: 100; */
+    border-bottom-left-radius: 0;
+    transform-origin: top left;
+}
+
+.overlay2 {
+
 }
 </style>
