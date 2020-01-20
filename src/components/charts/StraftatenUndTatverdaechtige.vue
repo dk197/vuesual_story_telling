@@ -55,7 +55,10 @@ export default {
                         text: 'Anzahl'
                     }
                 },
-                series: this.series
+                series: this.series,
+                tooltip: {
+                    shared: true
+                }
             }
         }
     },
