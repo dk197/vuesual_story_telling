@@ -1,6 +1,6 @@
 <template>
     <Wrapper>
-	<h2 class="heading">Die Clans</h2>
+	<h2 class="heading">Brennpunkte in NRW</h2>
             
     </Wrapper> 
 </template>

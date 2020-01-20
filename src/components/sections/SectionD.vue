@@ -1,6 +1,6 @@
 <template>
     <Wrapper>
-	<h2 class="heading">Die Clans</h2>
+	<h2 class="heading">Straftaten und ihre Täter</h2>
             
     </Wrapper>
  
