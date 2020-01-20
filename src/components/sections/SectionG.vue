@@ -28,7 +28,7 @@ export default {
                     row1: [66, 39, 37],
                     row2: [44, 30, 30]
                 },
-                Aachen: {
+                StädteregionAachen: {
                     row1: [107, 72, 74],
                     row2: [67, 69, 62]
                 },
@@ -64,15 +64,11 @@ export default {
                     row1: [30, 25, 43],
                     row2: [23, 23, 28]
                 },
-                Düsseldorf_LKA: {
-                    row1: [2, 3, 4],
-                    row2: [2, 3, 4]
+                Düsseldorf: {
+                    row1: [138, 133, 129],
+                    row2: [113, 107, 108]
                 },
-                Düsseldorf_PP: {
-                    row1: [136, 130, 125],
-                    row2: [111, 104, 104]
-                },
-                Ennepe_Ruhr_Kreis: {
+                EnnepeRuhrKreis: {
                     row1: [29, 29, 27],
                     row2: [19, 26, 24]
                 },
@@ -128,7 +124,7 @@ export default {
                     row1: [50, 42, 47],
                     row2: [32, 35, 32]
                 },
-                Märkischer_Kreis: {
+                MärkischerKreis: {
                     row1: [93, 83, 78],
                     row2: [55, 52, 50]
                 },
@@ -136,7 +132,7 @@ export default {
                     row1: [94, 124, 109],
                     row2: [71, 78, 65]
                 },
-                Minden_Lübbecke: {
+                MindenLübbecke: {
                     row1: [42, 71, 78],
                     row2: [38, 42, 43]
                 },
@@ -148,7 +144,7 @@ export default {
                     row1: [93, 72, 36],
                     row2: [41, 48, 34]
                 },
-                Oberbergischer_Kreis: {
+                OberbergischerKreis: {
                     row1: [38, 6, 11],
                     row2: [18, 6, 9]
                 },
@@ -168,23 +164,23 @@ export default {
                     row1: [324, 419, 348],
                     row2: [249, 297, 265]
                 },
-                Rhein_Erft_Kreis: {
+                RheinErftKreis: {
                     row1: [46, 49, 57],
                     row2: [30, 28, 31]
                 },
-                Rheinisch_Bergischer_Kreis: {
+                RheinischBergischerKreis: {
                     row1: [27, 15, 12],
                     row2: [17, 11, 11]
                 },
-                Rhein_Kreis_Neuss: {
+                RheinKreisNeuss: {
                     row1: [35, 36, 42],
                     row2: [30, 28, 31]
                 },
-                Rhein_Sieg_Kreis: {
+                RheinSiegKreis: {
                     row1: [18, 14, 15],
                     row2: [18, 13, 13]
                 },
-                Siegen_Wittgenstein: {
+                SiegenWittgenstein: {
                     row1: [65, 50, 54],
                     row2: [38, 23, 33]
                 },
@@ -211,6 +207,30 @@ export default {
                 Wuppertal: {
                     row1: [116, 147, 136],
                     row2: [89, 106, 88]
+                },
+                Leverkusen: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
+                },
+                Solingen: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
+                },
+                Bottrop: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
+                },
+                Remscheid: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
+                },
+                Herne: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
+                },
+                MülheimAnDerRuhr: {
+                    row1: [0, 0, 0],
+                    row2: [0, 0, 0]
                 }
             }
         }
@@ -224,7 +244,14 @@ export default {
         EventBus.$on('mapSelected', value => {
             console.log(value);
             // value = 'test'
-           
+            value = value.replace(/\s/g, '');
+            value = value.replace(/-/g, '');
+
+            if(value.includes('-')) {
+                value = value.replace(/-/g, '_');
+            }
+            console.log(value);
+
             this.series = [
                 {
                     name: 'Straftaten',

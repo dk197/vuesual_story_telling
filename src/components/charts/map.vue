@@ -82,10 +82,10 @@ export default {
                                 color: "#700101"
                             }
                         },
-                        dataLabels: {
-                            enabled: true,
-                            format: "{point.name}"
-                        }
+                        // dataLabels: {
+                        //     enabled: true,
+                        //     format: "{point.name}"
+                        // }
                     }
                 ],
                 plotOptions: {
