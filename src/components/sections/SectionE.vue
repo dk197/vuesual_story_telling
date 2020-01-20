@@ -5,7 +5,7 @@
             <Altersverteilung></Altersverteilung>
         </div>
         <div class="slide">
-            <MerhfachtäterAufClan></MerhfachtäterAufClan>
+            <MehrfachtaeterAufClan></MehrfachtaeterAufClan>
         </div>
         
         
@@ -15,13 +15,13 @@
 <script>
 import Wrapper from "../Wrapper.vue";
 import Altersverteilung from "../charts/Altersverteilung";
-import MerhfachtäterAufClan from '../charts/MehrfachtäterAufClan'
+import MehrfachtaeterAufClan from '../charts/MehrfachtaeterAufClan'
 
 export default {
     components: {
         Wrapper,
         Altersverteilung,
-        MerhfachtäterAufClan
+        MehrfachtaeterAufClan
     }
 };
 </script>
