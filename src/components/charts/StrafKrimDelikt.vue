@@ -13,13 +13,32 @@ export default {
                 title: {
                     text: 'Straftaten nach Kriminalitätsfeld und Deliktsbereich'
                 },
-                xAxis: {
-                    categories: ['Clan O','Clan E', 'Clan A', 'Clan K', 'Clan S', 'Clan Y', 'Clan I', 'Clan F', 'Clan M', 'Clan T']
-                },
-                yAxis: {
-                    categories: ['Antragsdelikte', 'Ausländerrecht', 'Betrugs- und Fälschungsdelikte', 'Eigentumsdelikte', 'Rohheitsdelikte', 'Politisch motivierte Delikte', 'Rauschgiftdelikte', 'Sexualkriminalität', 'Sonstige Kriminalität', 'Steuer- und Zolldelikte', 'Waffenrecht', 'Wirtschaftskriminalität'],
-                    title: null
-                },
+                xAxis: [
+                    {
+                        categories: ['Clan O','Clan E', 'Clan A', 'Clan K', 'Clan S', 'Clan Y', 'Clan I', 'Clan F', 'Clan M', 'Clan T'],
+                        opposite: true
+                    },
+                    {
+                        linkedTo: 0,
+                        opposite: false,
+                        categories: [1738, 1017, 680, 585, 539, 480, 473, 459, 455, 409],
+                        labels: {
+                            autoRotationLimit: 0
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        categories: ['Antragsdelikte', 'Ausländerrecht', 'Betrugs- und Fälschungsdelikte', 'Eigentumsdelikte', 'Rohheitsdelikte', 'Politisch motivierte Delikte', 'Rauschgiftdelikte', 'Sexualkriminalität', 'Sonstige Kriminalität', 'Steuer- und Zolldelikte', 'Waffenrecht', 'Wirtschaftskriminalität'],
+                        title: null
+                    },
+                    {
+                        linkedTo: 0,
+                        opposite: true,
+                        categories: [721, 36, 1214, 1105, 2866, 8, 429, 77, 297, 9, 64, 9],
+                        title: null
+                    }
+                ],
                 colorAxis: {
                     min: 0,
                     minColor: '#F2EAEA',
