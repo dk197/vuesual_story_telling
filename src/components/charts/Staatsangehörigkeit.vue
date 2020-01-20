@@ -15,6 +15,29 @@ export default {
                 title: {
                     text: 'Staatsangehörigkeit der Tatverdächtigen'
                 },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                            distance: -50,
+                            style: {
+                                textOutline: false
+                            },
+                            filter: {
+                                property: 'percentage',
+                                operator: '>',
+                                value: 4
+                            }
+                        },
+                        showInLegend: true
+                    }
+                },
                 series: [{
                     name: 'Staatsangehörigkeit',
                     data: [

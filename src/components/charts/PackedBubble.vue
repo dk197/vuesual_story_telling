@@ -11,10 +11,10 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'packedbubble',
-                    height: '100%'
+                    height: '500px'
                 },
                 title: {
-                    text: 'Carbon emissions around the world (2014)'
+                    text: 'Straftaten auf Clanebene betrachtet'
                 },
                 tooltip: {
                     useHTML: true,
@@ -24,7 +24,7 @@ export default {
                     packedbubble: {
                         maxSize: '120%',
                         zMin: 0,
-                        zMax: 1000,
+                        zMax: 2000,
                         layoutAlgorithm: {
                             splitSeries: false,
                             gravitationalConstant: 0.02
@@ -33,7 +33,7 @@ export default {
                             enabled: true,
                             format: '{point.name}',
                             style: {
-                                color: 'black',
+                                color: 'white',
                                 textOutline: 'none',
                                 fontWeight: 'normal'
                             }
@@ -45,61 +45,101 @@ export default {
                     data: [{
                         name: 'Clan O',
                         value: 1738
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 }, {
                     name: 'Clan E',
                     data: [{
                         name: "Clan E",
                         value: 1017
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 }, {
                     name: 'Clan A',
                     data: [{
                         name: "Clan A",
                         value: 680
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 }, {
                     name: 'CLan K',
                     data: [{
                         name: "Clan K",
                         value: 585
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 }, {
                     name: 'Clan S',
                     data: [{
                         name: "Clan S",
                         value: 539
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 },{
                     name: 'Clan Y',
                     data: [{
                         name: "Clan Y",
-                        value: 481
-                    }]
+                        value: 481,
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 },{
                     name: 'Clan I',
                     data: [{
                         name: "Clan I",
                         value: 473
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 },{
                     name: 'Clan F',
                     data: [{
                         name: "Clan F",
                         value: 459
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 },{
                     name: 'Clan M',
                     data: [{
                         name: "Clan M",
                         value: 455
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 },{
                     name: 'Clan T',
                     data: [{
                         name: "Clan T",
                         value: 409
-                    }]
+                    }],
+                    color : '#700101',
+                    marker: {
+                        fillOpacity: 1
+                    }
                 }]
             }
         }
@@ -108,38 +148,6 @@ export default {
 </script>
 
 <style scoped>
-.highcharts-figure, .highcharts-data-table table {
-    min-width: 320px; 
-    max-width: 800px;
-    margin: 1em auto;
-}
 
-.highcharts-data-table table {
-	font-family: Verdana, sans-serif;
-	border-collapse: collapse;
-	border: 1px solid #EBEBEB;
-	margin: 10px auto;
-	text-align: center;
-	width: 100%;
-	max-width: 500px;
-}
-.highcharts-data-table caption {
-    padding: 1em 0;
-    font-size: 1.2em;
-    color: #555;
-}
-.highcharts-data-table th {
-	font-weight: 600;
-    padding: 0.5em;
-}
-.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
-    padding: 0.5em;
-}
-.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
-}
-.highcharts-data-table tr:hover {
-    background: #f1f7ff;
-}
 
 </style>
