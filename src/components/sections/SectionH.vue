@@ -19,16 +19,9 @@ export default {
             series: [],
             tableData: {
                 Steinfurt: {
-                    straft: {
-                        year1: 107,
-                        year2: 72,
-                        year3: 74
-                    },
-                    tatverd: {
-                        year1: 67,
-                        year2: 69,
-                        year3: 62
-                    }
+                    row1: [107, 67],
+                    row2: [72, 69],
+                    row3: [74, 62]
                 }
             }
         }
@@ -41,23 +34,23 @@ export default {
     created() {
         EventBus.$on('mapSelected', value => {
             console.log(value);
+            value = 'test'
            
             this.series = [
                 {
                     name: '2016',
-                    data: [this.tableData[value].straft.year1, this.tableData[value].tatverd.year1]
+                    data: this.tableData[value].row1
                 },
                 {
                     name: '2017',
-                    data: [this.tableData[value].straft.year2, this.tableData[value].tatverd.year2]
+                    data: this.tableData[value].row2
                 },
                 {
                     name: '2018',
-                    data: [this.tableData[value].straft.year3, this.tableData[value].tatverd.year3]
+                    data: this.tableData[value].row3
                 }
             ]
             this.showBarChart = true
-            this.currentComponent = 'EmptyTestComponent'
         })
     },
     methods: {
