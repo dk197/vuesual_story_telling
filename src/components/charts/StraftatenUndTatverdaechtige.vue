@@ -1,7 +1,7 @@
 <template>
     <div>
-        <!-- <highcharts :options="chartOptions"></highcharts> -->
-        <p>test2</p>
+        <highcharts :options="chartOptions"></highcharts>
+        <!-- <p>test2</p> -->
     </div>
     <!-- <p>{{ chartData }}</p> -->
 </template>
@@ -36,30 +36,43 @@ export default {
     //         }
     //     }
     // },
-    // data() {
-    //     return {
-    //         chartOptions: {
-    //             chart: {
-    //                 type: 'bar'
-    //             },
-    //             title: {
-    //                 text: 'Straftaten und Tatverdächtige im zeitlichem Verlauf'
-    //             },
-    //             xAxis: {
-    //                 categories: this.categories            
-    //             },
-    //             yAxis: {
-    //                 min: 0,
-    //                 title: {
-    //                     text: 'Anzahl'
-    //                 }
-    //             },
-    //             series: this.series
-    //         }
-    //     }
-    // },
-    // mounted() {
-    //     console.log(this.chartOptions);
-    // }
+    props: ['series'],
+    data() {
+        return {
+            chartOptions: {
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Straftaten und Tatverdächtige im zeitlichem Verlauf'
+                },
+                xAxis: {
+                    categories: ['Straftaten', 'Tatverdächtige']       
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Anzahl'
+                    }
+                },
+                series: this.series
+            }
+        }
+    },
+    watch: {
+        series(newVal, oldVal) {
+            console.log(newVal);
+            console.log(oldVal);
+            this.chartOptions.series = newVal
+        }
+    },
+    methods: {
+        // updateSeries() {
+        //     this.chartOptions.series = 
+        // }
+    },
+    mounted() {
+        console.log(this.chartOptions);
+    }
 }
 </script>
