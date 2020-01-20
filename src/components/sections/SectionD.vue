@@ -26,7 +26,7 @@
                 <p>Anzahl der Straftaten</p>
             </div>
             <div class="caption last-caption">
-                <img src="../../assets/warning.svg">
+                <img src="../../assets/average.svg">
                 <p>Durchschnittliche <br> Straftaten pro Täter</p>
             </div>
             <div class="line"></div>
@@ -156,7 +156,7 @@ export default {
 
 .source {
     position: absolute;
-    bottom: 8%;
+    bottom: 5%;
     font-size: 14px;
     opacity: 60%;
 }
