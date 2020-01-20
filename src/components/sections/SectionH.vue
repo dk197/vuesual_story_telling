@@ -42,29 +42,30 @@ export default {
         StraftatenUndTatverdaechtige,
         EmptyTestComponent
     },
-    mounted() {
+    created() {
         const x = this
-        EventBus.$on('mapSelected', function(value) {
-            x.getDataOfBezirk(value)
-            x.chartData =  {
+        // EventBus.$on('mapSelected', function(value) {
+            EventBus.$on('mapSelected', value => {
+            this.getDataOfBezirk(value)
+            this.chartData =  {
                 categories: ['Straftaten', 'Tatverdächtige'],
                 series: [
                     {
                         name: '2016',
-                        data: [x.tableData[value].straft.year1, x.tableData[value].tatverd.year1]
+                        data: [this.tableData[value].straft.year1, x.tableData[value].tatverd.year1]
                     },
                     {
                         name: '2017',
-                        data: [x.tableData[value].straft.year2, x.tableData[value].tatverd.year2]
+                        data: [this.tableData[value].straft.year2, x.tableData[value].tatverd.year2]
                     },
                     {
                         name: '2018',
-                        data: [x.tableData[value].straft.year3, x.tableData[value].tatverd.year3]
+                        data: [this.tableData[value].straft.year3, x.tableData[value].tatverd.year3]
                     }
                 ]
             }
-            x.showBarChart = true
-            x.currentComponent = 'EmptyTestComponent'
+            this.showBarChart = true
+            this.currentComponent = 'EmptyTestComponent'
         })
     },
     methods: {
