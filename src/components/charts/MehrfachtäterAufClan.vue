@@ -33,7 +33,10 @@ export default {
                         data: [43, 30, 19, 18, 16, 13, 12, 12, 14],
                         color: '#1A1A1A'
                     }
-                ]
+                ],
+                tooltip: {
+                    shared: true
+                }
             }
         }
     }
