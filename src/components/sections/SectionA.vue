@@ -39,6 +39,7 @@
                     </p>
                 </div>
                 <div class="background"></div>
+                <div class="source">Quelle: Vgl. Landeskriminalamt Nordrhein-Westfalen, „Clankriminalität – Lagebild NRW 2018“ , S. 6ff.</div>
             </div>
     </Wrapper>
  
@@ -85,6 +86,14 @@ export default {
     left: 30%;
     top: 15%;
     opacity: 10%;
+}
 
+.source {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0%;
+    top: 110%;
+    font-size: 14px;
 }
 </style>

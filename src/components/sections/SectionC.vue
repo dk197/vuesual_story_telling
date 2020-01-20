@@ -1,6 +1,6 @@
 <template>
     <Wrapper>
-        <h2 class="heading">Die Clans</h2>
+        <h2 class="heading">Die Tatverdächtigen</h2>
         <div class="chart-wrapper">
 			<div style="float: left;">
 				<Geschlechterverteilung></Geschlechterverteilung>

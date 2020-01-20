@@ -7,10 +7,7 @@
             <SectionD></SectionD>
             <SectionE></SectionE>
             <SectionF></SectionF>
-            <SectionE></SectionE>
-            <SectionF></SectionF>
             <SectionG></SectionG>
-            <SectionH></SectionH>
             <Footer></Footer>
         </full-page> 
 </template>
@@ -27,7 +24,6 @@ import SectionD from "./components/sections/SectionD.vue";
 import SectionE from "./components/sections/SectionE.vue";
 import SectionF from "./components/sections/SectionF.vue";
 import SectionG from "./components/sections/SectionG.vue";
-import SectionH from "./components/sections/SectionH.vue";
 
 export default {
     components: {
@@ -39,8 +35,7 @@ export default {
         SectionD,
         SectionE,
         SectionF,
-        SectionG,
-        SectionH,
+        SectionG
     },
     name: 'app',
     data () {
@@ -49,9 +44,9 @@ export default {
           licenseKey: 'YOUR_KEY_HERE',
           navigation: true,
           navigationPosition: 'left',
-          navigationTooltips: ['', 'Die Studie', 'Die Clans', 'SectionC', 'SectionD', 'SectionE', 'SectionF', 'SectionG', 'SectionH', ''],
+          navigationTooltips: ['', 'Die Studie', 'Die Clans', 'Die Tatverdächtigen', 'Straftaten und ihre Täter', 'Mehr zu den Mehrfachtätern', 'Die Kriminalitätsbereiche', 'Brennpunkte in NRW', ''],
           showActiveTooltip: true,
-          anchors: ['Home', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10', 'page11', 'Footer'],
+          anchors: ['Home', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'Footer'],
           // sectionsColor: ['#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6', '#ee1a59', '#2c3e4f', '#ba5be9', '#b4b8ab', '#41b883', '#ff5f45', '#0798ec', '#fec401', '#1bcee6',]
         }
       }
@@ -72,10 +67,10 @@ body {
 
 .heading {
     font-family: "Jost";
-    font-size: 70px;
+    font-size: 60px;
     text-transform: uppercase;
     font-weight: bold;
-    width: 550px;
+    width: 100%;
 }
 
 .fp-section {

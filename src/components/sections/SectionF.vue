@@ -1,6 +1,6 @@
 <template>
     <Wrapper>
-        <h2 class="heading">Die Clans</h2>
+        <h2 class="heading">Die Kriminalitätsbereiche</h2>
         <StrafKrimDelikt></StrafKrimDelikt>
     </Wrapper>
 </template>
