@@ -10,7 +10,6 @@
             <SectionE></SectionE>
             <SectionF></SectionF>
             <SectionG></SectionG>
-            <SectionH></SectionH>
             <Footer></Footer>
         </full-page> 
 </template>
@@ -27,7 +26,6 @@ import SectionD from "./components/sections/SectionD.vue";
 import SectionE from "./components/sections/SectionE.vue";
 import SectionF from "./components/sections/SectionF.vue";
 import SectionG from "./components/sections/SectionG.vue";
-import SectionH from "./components/sections/SectionH.vue";
 
 export default {
     components: {
@@ -40,7 +38,6 @@ export default {
         SectionE,
         SectionF,
         SectionG,
-        SectionH,
     },
     name: 'app',
     data () {
