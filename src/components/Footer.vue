@@ -31,6 +31,10 @@ export default {
 
 <style scoped>
 
+p, h2, h3 {
+  color: white
+}
+
 .footer {
     height: 100vh;
     position: relative;

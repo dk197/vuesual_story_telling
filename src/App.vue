@@ -119,4 +119,8 @@ body {
 .fp-viewing-Home > #fp-nav, .fp-viewing-Footer > #fp-nav, .highcharts-credits{
   display: none;
 }
+
+p, h2, h3 {
+  color: #0D1321
+}
 </style>
