@@ -41,13 +41,13 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'bar'
+                    type: 'column'
                 },
                 title: {
                     text: 'Straftaten und Tatverdächtige im zeitlichem Verlauf'
                 },
                 xAxis: {
-                    categories: ['Straftaten', 'Tatverdächtige']       
+                    categories: ['2016', '2017', '2018']       
                 },
                 yAxis: {
                     min: 0,

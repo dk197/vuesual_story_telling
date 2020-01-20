@@ -21,14 +21,12 @@ export default {
             series: [],
             tableData: {
                 Steinfurt: {
-                    row1: [107, 67],
-                    row2: [72, 69],
-                    row3: [74, 62]
+                    row1: [55, 49, 49],
+                    row2: [41, 39, 40]
                 },
                 Euskirchen: {
-                    row1: [66, 44],
-                    row2: [39, 30],
-                    row3: [37, 30]
+                    row1: [66, 39, 37],
+                    row2: [44, 30, 30]
                 }
             }
         }
@@ -45,19 +43,16 @@ export default {
            
             this.series = [
                 {
-                    name: '2016',
+                    name: 'Straftaten',
                     // data: [this.tableData[value].straft.year1, this.tableData[value].tatverd.year1]
-                    data: this.tableData[value].row1
+                    data: this.tableData[value].row1,
+                    color: '#700101'
                 },
                 {
-                    name: '2017',
+                    name: 'Tatverdächtige',
                     // data: [this.tableData[value].straft.year2, this.tableData[value].tatverd.year2]
-                    data: this.tableData[value].row2
-                },
-                {
-                    name: '2018',
-                    // data: [this.tableData[value].straft.year3, this.tableData[value].tatverd.year3]
-                    data: this.tableData[value].row3
+                    data: this.tableData[value].row2,
+                    color: '#1A1A1A'
                 }
             ]
             this.showBarChart = true

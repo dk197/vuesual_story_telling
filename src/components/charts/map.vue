@@ -74,7 +74,7 @@ export default {
                             ["de-nw-05111000", 51],
                             ["de-nw-05362000", 52]
                         ],
-                        name: "Random data",
+                        name: "Anzahl Tatverdächtige",
                         states: {
                             hover: {
                                 color: "#BADA55"
