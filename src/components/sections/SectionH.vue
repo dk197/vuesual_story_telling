@@ -2,7 +2,7 @@
     <Wrapper>
         <h2 class="heading">Die Clans</h2>
         <Map></Map>
-        <StraftatenUndTatverdächtige v-if="showBarChart" :chartData="chartData"></StraftatenUndTatverdächtige>
+        <StraftatenUndTatverdächtige  ></StraftatenUndTatverdächtige>
     </Wrapper>
 </template>
 
