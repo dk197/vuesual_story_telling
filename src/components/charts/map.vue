@@ -11,11 +11,12 @@ export default {
             mapOptions: {
                 chart: {
                     map: json,
-                    width: 500
+                    width: 800
                 },
 
                 colorAxis: {
-                    min: 0
+                    min: 0,
+                    maxColor: '#700101'
                 },
                 series: [
                     {
@@ -81,9 +82,10 @@ export default {
                             ["de-nw-05362000", 152]
                         ],
                         name: "Anzahl Straftaten",
+                        color: '#700101',
                         states: {
                             hover: {
-                                color: "#BADA55"
+                                color: "#700101"
                             }
                         },
                         dataLabels: {
