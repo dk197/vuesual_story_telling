@@ -10,7 +10,8 @@ export default {
         return {
             mapOptions: {
                 chart: {
-                    map: json
+                    map: json,
+                    width: 500
                 },
 
                 colorAxis: {
