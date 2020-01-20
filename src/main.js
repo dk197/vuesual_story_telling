@@ -5,6 +5,7 @@ import More from 'highcharts/highcharts-more'
 import HighchartsVue from 'highcharts-vue'
 import loadMap from 'highcharts/modules/map.js';
 import VueFullPage from 'vue-fullpage.js'
+import './fullpage.scrollHorizontally.min'
 
 More(Highcharts)
 Vue.config.productionTip = false

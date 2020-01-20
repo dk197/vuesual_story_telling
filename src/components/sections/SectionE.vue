@@ -1,8 +1,14 @@
 <template>
     <Wrapper>
         <h2 class="heading">Mehr zu den Mehrfachtätern</h2>
-        <Altersverteilung></Altersverteilung>
-        <MerhfachtäterAufClan></MerhfachtäterAufClan>
+        <div class="slide">
+            <Altersverteilung></Altersverteilung>
+        </div>
+        <div class="slide">
+            <MerhfachtäterAufClan></MerhfachtäterAufClan>
+        </div>
+        
+        
     </Wrapper>
 </template>
 
@@ -20,5 +26,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.fp-controlArrow {
+    display: none;
+}
 </style>
