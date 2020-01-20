@@ -18,6 +18,11 @@ export default {
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
                 },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
                 plotOptions: {
                     pie: {
                         allowPointSelect: true,
