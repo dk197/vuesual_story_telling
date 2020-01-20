@@ -83,6 +83,11 @@ window.onload = function () {
 
 <style scoped>
 
+
+p, h2, h3 {
+  color: white
+}
+
 .header {
     height: 100vh;
     position: relative;
