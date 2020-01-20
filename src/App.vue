@@ -72,6 +72,17 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    position: relative;
+}
+
+.heading:after {
+  content: '';
+  height: 5px;
+  width: 150px;
+  background-color :#B70404;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .fp-section {

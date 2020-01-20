@@ -11,10 +11,11 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'packedbubble',
-                    height: '500px'
+                    height: '600',
+                    width: '1100'
                 },
                 title: {
-                    text: 'Straftaten auf Clanebene betrachtet'
+                    text: ''
                 },
                 tooltip: {
                     useHTML: true,
@@ -35,7 +36,9 @@ export default {
                             style: {
                                 color: 'white',
                                 textOutline: 'none',
-                                fontWeight: 'normal'
+                                fontWeight: 'normal',
+                                fontSize: '20px',
+                                fontFamily: 'Muli'
                             }
                         }
                     }
