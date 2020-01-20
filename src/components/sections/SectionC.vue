@@ -2,7 +2,7 @@
     <Wrapper>
         <h2 class="heading">Die Tatverdächtigen</h2>
         <div class="chart-wrapper">
-			<div style="float: left;">
+			<div>
 				<Geschlechterverteilung></Geschlechterverteilung>
 			</div>
 			<div>
