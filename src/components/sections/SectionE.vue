@@ -1,24 +1,33 @@
 <template>
     <Wrapper>
         <h2 class="heading">Mehr zu den Mehrfachtätern</h2>
-        <Altersverteilung></Altersverteilung>
-        <MerhfachtäterAufClan></MerhfachtäterAufClan>
+        <div class="slide">
+            <Altersverteilung></Altersverteilung>
+        </div>
+        <div class="slide">
+            <MehrfachtaeterAufClan></MehrfachtaeterAufClan>
+        </div>
+        
+        
     </Wrapper>
 </template>
 
 <script>
 import Wrapper from "../Wrapper.vue";
 import Altersverteilung from "../charts/Altersverteilung";
-import MerhfachtäterAufClan from '../charts/MehrfachtäterAufClan'
+import MehrfachtaeterAufClan from '../charts/MehrfachtaeterAufClan'
 
 export default {
     components: {
         Wrapper,
         Altersverteilung,
-        MerhfachtäterAufClan
+        MehrfachtaeterAufClan
     }
 };
 </script>
 
-<style scoped>
+<style>
+.fp-controlArrow {
+    display: none;
+}
 </style>
