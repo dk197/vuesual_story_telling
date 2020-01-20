@@ -2,20 +2,23 @@
     <Wrapper>
         <h2 class="heading">Die Clans</h2>
         <Map></Map>
-        <StraftatenUndTatverdächtige  ></StraftatenUndTatverdächtige>
+        <!-- <StraftatenUndTatverdaechtige v-if="showBarChart" :categories="chartData.categories" :series="chartData.series"></StraftatenUndTatverdaechtige> -->
+        <component v-bind:is="currentComponent"></component>
     </Wrapper>
 </template>
 
 <script>
 import Wrapper from "../Wrapper.vue";
 import Map from "../charts/map";
-import StraftatenUndTatverdächtige from '../charts/StraftatenUndTatverdächtige'
+import StraftatenUndTatverdaechtige from '../charts/StraftatenUndTatverdaechtige'
+import EmptyTestComponent from '../charts/emptyTestComponent'
 import { EventBus } from '../../others/eventBus'
 
 export default {
     data() {
         return {
             showBarChart: false,
+            currentComponent: 'StraftatenUndTatverdaechtige',
             chartData: {},
             tableData: {
                 Steinfurt: {
@@ -36,7 +39,8 @@ export default {
     components: {
         Wrapper,
         Map,
-        StraftatenUndTatverdächtige
+        StraftatenUndTatverdaechtige,
+        EmptyTestComponent
     },
     mounted() {
         const x = this
@@ -60,6 +64,7 @@ export default {
                 ]
             }
             x.showBarChart = true
+            x.currentComponent = 'EmptyTestComponent'
         })
     },
     methods: {
