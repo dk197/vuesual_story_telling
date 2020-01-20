@@ -94,6 +94,10 @@ body {
   background-color: white;
 }
 
+#fp-nav ul li a.active span {
+  background-color: #700101;
+}
+
 #fp-nav ul li:hover {
   height: 25px;
   width: 25px;
@@ -111,7 +115,7 @@ body {
   font-size: 18px;
 }
 
-.fp-viewing-Home > #fp-nav {
+.fp-viewing-Home > #fp-nav, .highcharts-credits{
   display: none;
 }
 </style>

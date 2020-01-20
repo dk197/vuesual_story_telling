@@ -95,5 +95,6 @@ export default {
     left: 0%;
     top: 110%;
     font-size: 14px;
+    opacity: 60%;
 }
 </style>
