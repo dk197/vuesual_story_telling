@@ -116,7 +116,7 @@ body {
   font-size: 18px;
 }
 
-.fp-viewing-Home > #fp-nav, .highcharts-credits{
+.fp-viewing-Home > #fp-nav, .fp-viewing-Footer > #fp-nav, .highcharts-credits{
   display: none;
 }
 </style>
