@@ -152,7 +152,7 @@ p, h2, h3 {
 .overlay {
     position: absolute;
     width: 54%;
-    height: 100vh;
+    height: 101vh;
     background-color: #0D1321;
     top: 0;
     left: 0;
