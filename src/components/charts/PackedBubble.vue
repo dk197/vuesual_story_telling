@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { EventBus } from "../../others/eventBus";
 export default {
     data() {
         return {
@@ -43,7 +44,14 @@ export default {
                         }
                     }
                 },
-                series: [{
+                series: []
+            }
+        }
+    },
+    created() {
+        EventBus.$on('slideChange', value => {
+            if(value === 'page3') {
+                this.chartOptions.series = [{
                     name: 'Clan O',
                     data: [{
                         name: 'Clan O',
@@ -145,7 +153,7 @@ export default {
                     }
                 }]
             }
-        }
+        })
     }
 };
 </script>

@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { EventBus } from '../../others/eventBus';
 export default {
     data() {
         return {
@@ -43,7 +44,14 @@ export default {
                         showInLegend: true
                     }
                 },
-                series: [{
+                series: []
+            }
+        };
+    },
+    created() {
+        EventBus.$on('slideChange', value => {
+            if(value === 'page4') {
+                this.chartOptions.series = [{
                     name: 'Geschlecht',
                     data: [
                         {
@@ -59,7 +67,7 @@ export default {
                     ]
                 }]
             }
-        };
+        })
     }
 };
 </script>
