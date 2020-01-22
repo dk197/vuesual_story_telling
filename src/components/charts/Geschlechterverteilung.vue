@@ -13,7 +13,7 @@ export default {
                 chart: {
                     type: 'pie',
                     backgroundColor: 'transparent',
-                    height: '290',
+                    height: '310',
                     width: '450'
                 },
                 title: {

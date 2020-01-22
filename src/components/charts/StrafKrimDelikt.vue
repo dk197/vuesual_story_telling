@@ -10,11 +10,11 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'heatmap',
-                    height: '600'
+                    height: '625',
                     animation: true
                 },
                 title: {
-                    text: 'Straftaten nach Kriminalitätsfeld und Deliktsbereich'
+                    text: 'Straftaten nach Kriminalitätsfeldern und Clans'
                 },
                 xAxis: [
                     {

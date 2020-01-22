@@ -45,6 +45,7 @@ export default {
                 licenseKey: "YOUR_KEY_HERE",
                 navigation: true,
                 navigationPosition: "left",
+                setAllowScrolling: true,
                 navigationTooltips: [
                     "",
                     "Die Studie",
@@ -176,4 +177,7 @@ h3 {
     color: #0d1321;
 }
 
+.fp-viewing-Home > .fullpage-wrapper {
+      transform: translate3d(0px, 0px, 0px) !important;
+}
 </style>

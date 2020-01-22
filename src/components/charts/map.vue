@@ -103,7 +103,7 @@ export default {
                     color: '#700101',
                     states: {
                         hover: {
-                            color: "#700101"
+                            color: "white"
                         }
                     },
                     // dataLabels: {

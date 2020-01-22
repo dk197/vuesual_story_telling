@@ -28,6 +28,20 @@ export default {
 
 <style>
 .fp-controlArrow {
-    display: none;
+    top: 60%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 340px;
+    height: 1px;
+    border-color: transparent #0D1321 transparent transparent;
+    border-width: 20px 24px 20px 0;
+}
+
+.fp-controlArrow.fp-next {
+    right: 50px;
+    height: 1px;
+    border-color: transparent transparent transparent #0D1321;
+    border-width: 20px 0 20px 24px;
 }
 </style>

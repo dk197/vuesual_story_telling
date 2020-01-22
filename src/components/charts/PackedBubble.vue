@@ -12,8 +12,8 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'packedbubble',
-                    height: '500',
-                    width: '1000'
+                    height: '550',
+                    width: '1100'
                 },
                 legend: {
                    enabled: false,   
@@ -40,7 +40,8 @@ export default {
                         zMax: 1000,
                         layoutAlgorithm: {
                             splitSeries: false,
-                            gravitationalConstant: 0
+                            gravitationalConstant: 0.0001,
+                            initialPositions: "random",
                         },
                         dataLabels: {
                             enabled: true,
