@@ -41,7 +41,9 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'column'
+                    type: 'column',
+                    height: 400,
+                    width: 380
                 },
                 title: {
                     text: 'Straftaten und Tatverdächtige im zeitlichem Verlauf'
