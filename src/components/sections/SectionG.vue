@@ -15,7 +15,9 @@
                 Anzahl der Täter. Klicken Sie auch ein Land <br>
                 um einen Gesamtüberblick zu erhalten.<br>
                 Bewegen Sie Ihre Maus über das <br>
-                Diagramm für genauere Informationen. 
+                Diagramm für genauere Informationen. <br>
+
+                <img src="../../assets/note.svg">
             </div>
             <div class="chart">
                 <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
@@ -306,5 +308,13 @@ export default {
     padding-top: 50px;
     padding-left: 745px;
     margin-bottom: 20px;
+}
+
+.text {
+    position: relative;
+}
+.text > img {
+    position: absolute;
+    bottom: -50%;
 }
 </style>
