@@ -78,7 +78,7 @@ p, h2, h3 {
     width: 54.8%;
     height: 100vh;
     background-color: #0D1321;
-    bottom: 0;
+    bottom: 4px;
     left: -36%;
     transform: skewX(32deg);
     transform-origin: top left;
