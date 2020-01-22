@@ -312,9 +312,12 @@ export default {
 
 .text {
     position: relative;
+    z-index: -999;
 }
+
 .text > img {
     position: absolute;
     bottom: -50%;
 }
+
 </style>
