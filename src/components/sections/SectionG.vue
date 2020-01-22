@@ -244,7 +244,7 @@ export default {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 },
-                MülheimAnDerRuhr: {
+                MülheimanderRuhr: {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 }
