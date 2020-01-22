@@ -1,10 +1,26 @@
 <template>
     <Wrapper>
         <h2 class="heading">Brennpunkte in NRW</h2>
-        <div style="float: left">
+        <div class="map-wrapper">
             <Map></Map>
         </div>
-        <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
+        <div class="right-side">
+            <div class="text">
+                Eine geodifferenzierte Darstellung der <br>
+                Tatorte macht eine Konzentration der <br>
+                Clankriminalität auf das Gebiet des <br>
+                Ruhrgebiets deutlich.<br>
+                Durch das Auswählen eines Jahres sehen <br>
+                Sie auf der Karte farblich gekennzeichnet die <br>
+                Anzahl der Täter. Klicken Sie auch ein Land <br>
+                um einen Gesamtüberblick zu erhalten.<br>
+                Bewegen Sie Ihre Maus über das <br>
+                Diagramm für genauere Informationen. 
+            </div>
+            <div class="chart">
+                <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
+            </div>
+        </div>
     </Wrapper>
 </template>
 
@@ -228,7 +244,7 @@ export default {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 },
-                MülheimAnDerRuhr: {
+                MülheimanderRuhr: {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 }
@@ -279,4 +295,16 @@ export default {
 </script>
 
 <style scoped>
+.map-wrapper {
+    float: left;
+    margin-right: 100px; 
+}
+.right-side{
+    height: 700px;
+}
+.right-side .text {
+    padding-top: 50px;
+    padding-left: 745px;
+    margin-bottom: 20px;
+}
 </style>
