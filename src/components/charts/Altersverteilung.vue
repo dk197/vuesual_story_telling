@@ -9,7 +9,8 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'column'
+                    type: 'column',
+                    height: '600'
                 },
                 title: {
                     text: 'Altersverteilung der Tatverdächtigen'

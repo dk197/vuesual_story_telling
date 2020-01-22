@@ -1,5 +1,7 @@
 <template>
-    <highcharts :options="chartOptions"></highcharts>
+    <div class="chart-container">
+        <highcharts :options="chartOptions"></highcharts>
+    </div>
 </template>
 
 <script>
@@ -11,10 +13,11 @@ export default {
                 chart: {
                     type: 'pie',
                     backgroundColor: 'transparent',
-                    width: 500
+                    height: '290',
+                    width: '450'
                 },
                 title: {
-                    text: 'Staatsangehörigkeit der Tatverdächtigen'
+                    text: ''
                 },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -22,12 +25,14 @@ export default {
                 legend: {
                     layout: 'vertical',
                     align: 'right',
-                    verticalAlign: 'middle'
+                    verticalAlign: 'middle',
+                    itemWidth: '120'
                 },
                 plotOptions: {
                     pie: {
                         allowPointSelect: true,
                         cursor: 'pointer',
+                        borderColor: 'black',
                         dataLabels: {
                             enabled: true,
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
@@ -42,7 +47,17 @@ export default {
                             }
                         },
                         showInLegend: true
-                    }
+                    },
+                    series: {
+                            point: {
+                                events: {
+                                    legendItemClick: function () {
+                                        return false; // <== returning false will cancel the default action
+                                    }
+                                }
+                            }
+                        }
+                   
                 },
                 series: []
             }
@@ -57,7 +72,7 @@ export default {
                         {
                             name: 'ohne Angabe',
                             y: 2,
-                            color: '#700101'
+                            color: '#0D1321'
                         },
                         {
                             name: 'staatenlos',
@@ -72,17 +87,17 @@ export default {
                         {
                             name: 'libanesisch',
                             y: 31,
-                            color: '#0E518D'
+                            color: '#700101'
                         },
                         {
                             name: 'türkisch',
                             y: 15,
-                            color: '#1D2D44'
+                            color: '#0E518D'
                         },
                         {
                             name: 'syrisch',
                             y: 13,
-                            color: '#0D1321'
+                            color: '#1D2D44'
                         },
                     ]
                 }]
@@ -93,4 +108,7 @@ export default {
 </script>
 
 <style scoped>
+    .chart-container {
+        width: 450px;
+    }
 </style>

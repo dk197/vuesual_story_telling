@@ -10,6 +10,7 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'heatmap',
+                    height: '600'
                     animation: true
                 },
                 title: {

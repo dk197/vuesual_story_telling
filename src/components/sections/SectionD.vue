@@ -48,6 +48,7 @@
                 <img src="../../assets/hand.svg">
                 <img src="../../assets/hand.svg">
                 <img src="../../assets/hand.svg">
+                <img src="../../assets/hand.svg">
                 <img src="../../assets/hand-half.svg">
             </div>
         </div>
@@ -71,7 +72,7 @@ export default {
 <style scoped>
 
 .text {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .content {
@@ -125,11 +126,19 @@ export default {
     height: 25px;
 }
 
+.icons > img:hover {
+    transform: scale(1.1);
+}
+
 .caption {
     margin-bottom: 20px;
     height: 100px;
     padding-top: 5px;
     background-color: white;
+}
+
+.caption:hover {
+    transform: scale(1.1);
 }
 
 .last-caption {
