@@ -49,8 +49,8 @@ export default {
         }
     },
     created() {
-        EventBus.$on('slideChange', value => {
-            if(value === 'page3') {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'page3') {
                 this.chartOptions.series = [{
                     name: 'Clan O',
                     data: [{
@@ -152,6 +152,11 @@ export default {
                         fillOpacity: 1
                     }
                 }]
+            }else if(value.origin === 'page3') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
             }
         })
     }

@@ -51,8 +51,8 @@ export default {
         };
     },
     created() {
-        EventBus.$on('slideChange', value => {
-            if(value === 'page7') {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'page7') {
                 this.chartOptions.series = [{
                     data: [
                         [0,0,194],[0,1,4],[0,2,278],[0,3,300],[0,4,768],[0,5,0],[0,6,77],[0,7,20],[0,8,73],[0,9,2],[0,10,20],[0,11,2],
@@ -74,6 +74,11 @@ export default {
                         }
                     }
                 }]
+            }else if(value.origin === 'page7') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
             }
         })
     }

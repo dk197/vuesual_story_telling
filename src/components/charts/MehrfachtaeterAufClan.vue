@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { EventBus } from '../../others/eventBus'
 export default {
     data() {
         return {
@@ -22,7 +23,18 @@ export default {
                         text: 'Straftaten durch Mehrfachtäter'
                     }
                 },
-                series: [
+                series: [],
+                tooltip: {
+                    shared: true
+                }
+            }
+        }
+    },
+    created() {
+        EventBus.$on('sectionChange', value => {
+            console.log(value);
+            if(value.destination === 'page6') {
+                this.chartOptions.series = [
                     {
                         name: 'Anzahl Straftaten',
                         data: [564, 340, 264, 208, 205, 196, 188, 154, 138],
@@ -33,12 +45,32 @@ export default {
                         data: [43, 30, 19, 18, 16, 13, 12, 12, 14],
                         color: '#1A1A1A'
                     }
-                ],
-                tooltip: {
-                    shared: true
-                }
-            }
-        }
+                ]
+            }else if(value.origin === 'page6') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
+            }  
+        })
+        EventBus.$on('slideChange', value => {
+            console.log(value);
+            if(value.destination === 'page6') {
+                this.chartOptions.series = [
+                    {
+                        name: 'Anzahl Straftaten',
+                        data: [564, 340, 264, 208, 205, 196, 188, 154, 138],
+                        color: '#700101'
+                    },
+                    {
+                        name: 'Anzahl Mehrfachtäter',
+                        data: [43, 30, 19, 18, 16, 13, 12, 12, 14],
+                        color: '#1A1A1A'
+                    }
+                ]
+            } 
+        })
     }
+    
 }
 </script>
