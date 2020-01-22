@@ -8,7 +8,8 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'heatmap'
+                    type: 'heatmap',
+                    height: '600'
                 },
                 title: {
                     text: 'Straftaten nach Kriminalitätsfeld und Deliktsbereich'

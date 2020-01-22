@@ -88,6 +88,7 @@ body {
 .fp-section {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .fp-tableCell {
@@ -134,4 +135,5 @@ body {
 p, h2, h3 {
   color: #0D1321
 }
+
 </style>

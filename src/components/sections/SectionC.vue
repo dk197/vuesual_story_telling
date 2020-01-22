@@ -1,35 +1,28 @@
 <template>
     <Wrapper>
         <h2 class="heading">Die Tatverdächtigen</h2>
-        <div>
-			<div class="container">
-				<div class="chart-wrapper">
-                    <Geschlechterverteilung></Geschlechterverteilung>
-                </div>
-                <div>
-                    <p>Die Analyse zum Geschlecht der registrierten<br>
-					Tatverdächtigen verschiedener Clans weist 20 Prozent <br>
-					der identifizierten Personen als weiblich und 80% als <br>
-					männlich aus.</p>
-                    <p>Der Schwerpunkt der Straftaten liegt im Bereich von <br>
-					Rohheitsdelikten und einfachen Eigentums-<br>
-                    und Vermögensdelikten.</p>
-                </div>
-			</div>
-			<div class="container">
-                <div class="chart-wrapper">
-					<Staatsangehörigkeit></Staatsangehörigkeit>
-                </div>
-                <div>
-                    <p>
-                        Bei der Zusammenstellung des Datenbestandes ist die <br>
-                        Migrationsbiographie relevanter Clans mitein-<br>
-                        geflossen. Die Datenanalyse beschränkte sich da-<br>
-                        her auf Tatverdächtige mit libanesischer, türkischer, <br>
-                        syrischer oder deutscher Staatsangehörigkeit.
-                    </p>
-                </div>
-			</div>
+        <div class="container">
+            <div class="charts">
+                <Geschlechterverteilung></Geschlechterverteilung>
+                <Staatsangehörigkeit></Staatsangehörigkeit>
+            </div>
+            <div class="content">
+                <img src="../../assets/man.svg">
+                <img src="../../assets/woman.svg">
+                <p>Die Analyse zum Geschlecht der registrierten<br>
+                Tatverdächtigen verschiedener Clans weist 20 Prozent <br>
+                der identifizierten Personen als weiblich und 80% als <br>
+                männlich aus. <br> Der Schwerpunkt der Straftaten liegt im <br> Bereich von
+                Rohheitsdelikten und einfachen Eigentums-<br>
+                und Vermögensdelikten.</p>
+                <p>
+                    Bei der Zusammenstellung des Datenbestandes ist die <br>
+                    Migrationsbiographie relevanter Clans mitein-<br>
+                    geflossen. Die Datenanalyse beschränkte sich da-<br>
+                    her auf Tatverdächtige mit libanesischer, türkischer, <br>
+                    syrischer oder deutscher Staatsangehörigkeit.
+                </p>
+            </div>
 		</div>
     </Wrapper>
 </template>
@@ -49,15 +42,23 @@ export default {
 </script>
 
 <style scoped>
-.chart-wrapper{
-	float:left; 
-	width: 60%;
-}
+
 .container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
+    width: 100%;
+    display: flex;
+}
+.charts{
+	width: 50%;
+    align-items: left;
+}
+.content {
+    width: 50%;
+}
+
+.content > img {
+    width: 180px;
+    height: 180px;
+    text-align: left;
+    margin: 40px 20px 30px 0;
 }
 </style>
