@@ -8,24 +8,24 @@
     <div class="content">
         <div class="left">
             <h3 class="subheading">Tatverdächtige</h3>
-            <p class="number">6.068</p>
-            <p class="number">9.562</p>
-            <p class="number last-number">1,5</p>
-            <div class="icons">
+            <p class="number" id="num1">6.068</p>
+            <p class="number" id="num2">9.562</p>
+            <p class="number last-number" id="num3">1,5</p>
+            <div class="icons" id=icon1>
                 <img src="../../assets/hand.svg">
                 <img src="../../assets/hand-half.svg">
             </div>
         </div>
         <div class="middle">
-            <div class="caption">
+            <div class="caption" id="cap1">
                 <img src="../../assets/mask.svg">
                 <p>Anzahl der Täter</p>
             </div>
-            <div class="caption">
+            <div class="caption" id="cap2">
                 <img src="../../assets/hand.svg">
                 <p>Anzahl der Straftaten</p>
             </div>
-            <div class="caption last-caption">
+            <div class="caption last-caption" id="cap3">
                 <img src="../../assets/average.svg">
                 <p>Durchschnittliche <br> Straftaten pro Täter</p>
             </div>
@@ -33,10 +33,10 @@
         </div>
         <div class="right">
             <h3 class="subheading">Mehrfachtäter</h3>
-            <p class="number">381</p>
-            <p class="number">4.663</p>
-            <p class="number last-number">12,5</p>
-            <div class="icons">
+            <p class="number" id=num4>381</p>
+            <p class="number" id="num5">4.663</p>
+            <p class="number last-number" id="num6">12,5</p>
+            <div class="icons" id="icon2">
                 <img src="../../assets/hand.svg">
                 <img src="../../assets/hand.svg">
                 <img src="../../assets/hand.svg">
@@ -61,12 +61,30 @@
 
 <script>
 import Wrapper from "../Wrapper.vue";
+import { EventBus } from '../../others/eventBus.js';
 
 export default {
     components: {
       Wrapper
     }
 };
+
+EventBus.$on('slideChange', value => {
+            if(value === 'page5') {
+                console.log('abc');
+                document.getElementById('cap1').style.transform = 'scale(1.0)';
+                document.getElementById('cap2').style.transform = 'scale(1.0)';
+                document.getElementById('cap3').style.transform = 'scale(1.0)';
+                document.getElementById('num1').style.opacity = '1';
+                document.getElementById('num2').style.opacity = '1';
+                document.getElementById('num3').style.opacity = '1';
+                document.getElementById('num4').style.opacity = '1';
+                document.getElementById('num5').style.opacity = '1';
+                document.getElementById('num6').style.opacity = '1';
+                document.getElementById('icon1').style.opacity = '1';
+                document.getElementById('icon2').style.opacity = '1';
+            }
+        })
 </script>
 
 <style scoped>
@@ -110,6 +128,9 @@ export default {
     font-size: 75px;
     margin: 10px 0;
     border-bottom: 1px solid grey;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
 }
 
 .last-number {
@@ -120,6 +141,9 @@ export default {
 .icons {
     border-bottom: 1px solid #707070;
     padding: 0 0 10px 10px;
+    opacity: 0;
+    transition-delay: 0.75s;
+    transition-duration: 1s;
 }
 
 .icons > img {
@@ -135,6 +159,9 @@ export default {
     height: 100px;
     padding-top: 5px;
     background-color: white;
+    transform: scale(0.8);
+    transition-delay: 0.25s;
+    transition-duration: 1s;
 }
 
 .caption:hover {
