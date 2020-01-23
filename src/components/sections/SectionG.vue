@@ -1,5 +1,7 @@
 <template>
     <Wrapper>
+        <div class="test1">
+            <img class="test" src="./test.svg">
         <h2 class="heading">Brennpunkte in NRW</h2>
         <div class="map-wrapper">
             <Map></Map>
@@ -22,6 +24,7 @@
             <div class="chart">
                 <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
             </div>
+        </div>
         </div>
     </Wrapper>
 </template>
@@ -314,7 +317,16 @@ export default {
     position: relative;
     z-index: -999;
 }
-
+.test1 {
+    position: relative;
+}
+.test {
+    position: absolute;
+    height: 1990px;
+    transform: rotate(-1deg);
+    top: -455px;
+    left: 12px;
+}
 .text > img {
     position: absolute;
     bottom: -50%;
