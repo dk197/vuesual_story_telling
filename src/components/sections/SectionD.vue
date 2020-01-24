@@ -66,12 +66,11 @@ import { EventBus } from '../../others/eventBus.js';
 export default {
     components: {
       Wrapper
-    }
-};
-
-EventBus.$on('slideChange', value => {
-            if(value === 'page5') {
-                console.log('abc');
+    },
+    created() {
+        EventBus.$on('sectionChange', value => {
+            console.log(value);
+            if(value.destination === 'page5') {
                 document.getElementById('cap1').style.transform = 'scale(1.0)';
                 document.getElementById('cap2').style.transform = 'scale(1.0)';
                 document.getElementById('cap3').style.transform = 'scale(1.0)';
@@ -83,8 +82,24 @@ EventBus.$on('slideChange', value => {
                 document.getElementById('num6').style.opacity = '1';
                 document.getElementById('icon1').style.opacity = '1';
                 document.getElementById('icon2').style.opacity = '1';
+            }else if(value.destination === 'page6' || value.destination === 'page4') {
+                document.getElementById('cap1').style.transform = 'scale(0.8)';
+                document.getElementById('cap2').style.transform = 'scale(0.8)';
+                document.getElementById('cap3').style.transform = 'scale(0.8)';
+                document.getElementById('num1').style.opacity = '0';
+                document.getElementById('num2').style.opacity = '0';
+                document.getElementById('num3').style.opacity = '0';
+                document.getElementById('num4').style.opacity = '0';
+                document.getElementById('num5').style.opacity = '0';
+                document.getElementById('num6').style.opacity = '0';
+                document.getElementById('icon1').style.opacity = '0';
+                document.getElementById('icon2').style.opacity = '0';
             }
         })
+    }
+};
+
+
 </script>
 
 <style scoped>

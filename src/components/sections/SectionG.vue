@@ -22,7 +22,7 @@
                 <img id="img" src="../../assets/note.svg">
             </div>
             <div class="chart">
-                <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
+                <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series" :selectedSection="selectedSection"></StraftatenUndTatverdaechtige>
             </div>
             
         </div>
@@ -41,6 +41,7 @@ import { EventBus } from '../../others/eventBus'
 export default {
     data() {
         return {
+            selectedSection: '',
             showBarChart: false,
             series: [],
             tableData: {
@@ -266,6 +267,9 @@ export default {
     },
     created() {
         EventBus.$on('mapSelected', value => {
+            console.log(value);
+            this.selectedSection = value
+            // value = 'test'
             value = value.replace(/\s/g, '');
             value = value.replace(/-/g, '');
 

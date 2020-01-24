@@ -16,6 +16,13 @@ export default {
                 title: {
                     text: 'Straftaten nach Kriminalitätsfeldern und Clans'
                 },
+                tooltip: {
+                    formatter: function() {
+                        return `
+                            Anzahl Straftaten: ${this.point.value}
+                        `
+                    }
+                },
                 xAxis: [
                     {
                         categories: ['Clan O','Clan E', 'Clan A', 'Clan K', 'Clan S', 'Clan Y', 'Clan I', 'Clan F', 'Clan M', 'Clan T'],
@@ -52,9 +59,10 @@ export default {
         };
     },
     created() {
-        EventBus.$on('slideChange', value => {
-            if(value === 'page7') {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'page7') {
                 this.chartOptions.series = [{
+                    name: 'Anzahl Straftaten',
                     data: [
                         [0,0,194],[0,1,4],[0,2,278],[0,3,300],[0,4,768],[0,5,0],[0,6,77],[0,7,20],[0,8,73],[0,9,2],[0,10,20],[0,11,2],
                         [1,0,120],[1,1,4],[1,2,194],[1,3,134],[1,4,406],[1,5,1],[1,6,60],[1,7,10],[1,8,77],[1,9,0],[1,10,9],[1,11,2],
@@ -75,6 +83,11 @@ export default {
                         }
                     }
                 }]
+            }else if(value.origin === 'page7') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
             }
         })
     }

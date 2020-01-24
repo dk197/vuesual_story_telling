@@ -20,7 +20,8 @@ export default {
                 },
                 colorAxis: {
                     min: 0,
-                    maxColor: '#700101'
+                    maxColor: '#700101',
+                    max: 2500
                 },
                 series: [],
                 plotOptions: {
@@ -38,8 +39,8 @@ export default {
         };
     },
     created() {
-        EventBus.$on('slideChange', value => {
-            if(value === 'page8') {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'page8') {
                 this.mapOptions.series = [{
                     animation: true,
                     data: [
@@ -115,6 +116,11 @@ export default {
                     //     format: "{point.name}"
                     // }
                 }]
+            }else if(value.origin === 'page8') {
+                const x = this
+                setTimeout(function(){ 
+                    x.mapOptions.series = []
+                }, 700);
             }
         })
     }

@@ -64,8 +64,8 @@ export default {
         };
     },
     created() {
-        EventBus.$on('slideChange', value => {
-            if(value === 'page4') {
+        EventBus.$on('sectionChange', value => {
+            if(value.destination === 'page4') {
                 this.chartOptions.series = [{
                     name: 'Staatsangehörigkeit',
                     data: [
@@ -101,6 +101,11 @@ export default {
                         },
                     ]
                 }]
+            }else if(value.origin === 'page4') {
+                const x = this
+                setTimeout(function(){ 
+                    x.chartOptions.series = []
+                }, 700);
             }
         })
     }

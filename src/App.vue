@@ -78,13 +78,27 @@ export default {
     },
     methods: {
         leaveSection(origin, destination) {
-			EventBus.$emit('slideChange', destination.anchor)
+			const event = {
+				origin: origin.anchor, 
+				destination: destination.anchor
+			}
+			EventBus.$emit('sectionChange', event)
 			// const test = origin
             // console.log(origin);
             // console.log(destination);
         },
-        leaveSlide(destination) {
-            console.log(destination);
+        leaveSlide(section, origin, destination, direction) {
+            const event = {
+                section: section.anchor,
+                origin: origin.index,
+                destination: destination.index
+            }
+			EventBus.$emit('slideChange', event)
+			/*eslint no-unused-vars: 0*/
+			// console.log(section);
+			// console.log(origin);
+			// console.log(destination);
+			// console.log(direction);
         }
     }
 };
