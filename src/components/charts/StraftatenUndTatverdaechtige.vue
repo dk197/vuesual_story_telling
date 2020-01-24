@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    props: ['series'],
+    props: ['series', 'selectedSection'],
     data() {
         return {
             chartOptions: {
@@ -37,6 +37,9 @@ export default {
     watch: {
         series(newVal) {
             this.chartOptions.series = newVal
+        },
+        selectedSection(newVal) {
+            this.chartOptions.title.text = `Straftaten und Tatverdächtige im zeitlichem Verlauf von ${newVal}`
         }
     }
 }
