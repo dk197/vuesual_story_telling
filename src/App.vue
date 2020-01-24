@@ -176,7 +176,7 @@ body {
 #fp-nav ul li .fp-tooltip.fp-left {
     left: 33px;
     top: 2px;
-    font-size: 18px;
+    font-size: 17.5px;
 }
 
 .fp-viewing-Home > #fp-nav,
