@@ -47,14 +47,14 @@ export default {
     },
     created() {
         EventBus.$on('sectionChange', value => {
-            console.log(value);
-            if(value.destination === 'page6') {
+            if(value.destination === 'page6' && value.origin === 'page5') {
                 this.chartOptions.series = [{
                     name: 'Anzahl',
                     data: [1, 0, 0, 2, 15, 13, 23, 13, 29, 16, 20, 18, 11, 17, 17, 12, 26, 8, 12, 7, 9, 10, 9, 10, 10, 6, 7, 7, 8, 8, 3, 7, 3, 4, 3, 4, 1, 3, 1, 0, 2, 2, 9, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
                     color: '#700101'
                 }]
-            }else if(value.origin === 'page6') {
+            }
+            else if(value.origin === 'page6' && value.destination === 'page5') {
                 const x = this
                 setTimeout(function(){ 
                     x.chartOptions.series = []
@@ -62,14 +62,13 @@ export default {
             }  
         })
         EventBus.$on('slideChange', value => {
-            console.log(value);
-            if(value.destination === 'page6') {
+            if(value.section === 'page6' && value.destination === 0 && value.origin === 1) {
                 this.chartOptions.series = [{
                     name: 'Anzahl',
                     data: [1, 0, 0, 2, 15, 13, 23, 13, 29, 16, 20, 18, 11, 17, 17, 12, 26, 8, 12, 7, 9, 10, 9, 10, 10, 6, 7, 7, 8, 8, 3, 7, 3, 4, 3, 4, 1, 3, 1, 0, 2, 2, 9, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
                     color: '#700101'
                 }]
-            }else if(value.origin === 'page6') {
+            }else if(value.section === 'page6' && value.destination === 1 && value.origin === 0) {
                 const x = this
                 setTimeout(function(){ 
                     x.chartOptions.series = []

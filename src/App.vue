@@ -88,7 +88,12 @@ export default {
             // console.log(destination);
         },
         leaveSlide(section, origin, destination, direction) {
-			EventBus.$emit('slideChange', section.anchor)
+            const event = {
+                section: section.anchor,
+                origin: origin.index,
+                destination: destination.index
+            }
+			EventBus.$emit('slideChange', event)
 			/*eslint no-unused-vars: 0*/
 			// console.log(section);
 			// console.log(origin);
