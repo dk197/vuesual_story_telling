@@ -93,7 +93,7 @@ export default {
     height: 100px;
     position: absolute;
     left: 0%;
-    top: 110%;
+    top: 130%;
     font-size: 14px;
     opacity: 60%;
 }

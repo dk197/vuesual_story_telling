@@ -1,10 +1,31 @@
 <template>
     <Wrapper>
+        <div class="test1">
+            <img class="test" src="./test.svg">
         <h2 class="heading">Brennpunkte in NRW</h2>
-        <div style="float: left">
+        <div class="map-wrapper">
             <Map></Map>
         </div>
-        <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
+        <div class="right-side">
+            <div class="text">
+                Eine geodifferenzierte Darstellung der <br>
+                Tatorte macht eine Konzentration der <br>
+                Clankriminalität auf das Gebiet des <br>
+                Ruhrgebiets deutlich.<br>
+                Durch das Auswählen eines Jahres sehen <br>
+                Sie auf der Karte farblich gekennzeichnet die <br>
+                Anzahl der Täter. Klicken Sie auch ein Land <br>
+                um einen Gesamtüberblick zu erhalten.<br>
+                Bewegen Sie Ihre Maus über das <br>
+                Diagramm für genauere Informationen. <br>
+
+                <img src="../../assets/note.svg">
+            </div>
+            <div class="chart">
+                <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
+            </div>
+        </div>
+        </div>
     </Wrapper>
 </template>
 
@@ -228,7 +249,7 @@ export default {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 },
-                MülheimAnDerRuhr: {
+                MülheimanderRuhr: {
                     row1: [0, 0, 0],
                     row2: [0, 0, 0]
                 }
@@ -279,4 +300,36 @@ export default {
 </script>
 
 <style scoped>
+.map-wrapper {
+    float: left;
+    margin-right: 100px; 
+}
+.right-side{
+    height: 700px;
+}
+.right-side .text {
+    padding-top: 50px;
+    padding-left: 745px;
+    margin-bottom: 20px;
+}
+
+.text {
+    position: relative;
+    z-index: -999;
+}
+.test1 {
+    position: relative;
+}
+.test {
+    position: absolute;
+    height: 1990px;
+    transform: rotate(-1deg);
+    top: -455px;
+    left: 12px;
+}
+.text > img {
+    position: absolute;
+    bottom: -50%;
+}
+
 </style>

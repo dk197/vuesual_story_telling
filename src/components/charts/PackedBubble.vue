@@ -12,24 +12,36 @@ export default {
             chartOptions: {
                 chart: {
                     type: 'packedbubble',
-                    height: '600',
+                    height: '550',
                     width: '1100'
+                },
+                legend: {
+                   enabled: false,   
                 },
                 title: {
                     text: ''
                 },
                 tooltip: {
                     useHTML: true,
-                    pointFormat: '<b>{point.value}</b> Straftaten'
+                    animation: true,
+                    pointFormat: '<b>{point.value}</b> Straftaten',
+                    style: {
+                        color: '#0D1321',
+                        fontSize: '15px',
+                        fontFamily: 'Muli',
+                    },
+                    backgroundColor: 'white',
+                    borderWidth: '0'
                 },
                 plotOptions: {
                     packedbubble: {
-                        maxSize: '120%',
+                        maxSize: '130%',
                         zMin: 0,
-                        zMax: 2000,
+                        zMax: 1000,
                         layoutAlgorithm: {
                             splitSeries: false,
-                            gravitationalConstant: 0.02
+                            gravitationalConstant: 0.0001,
+                            initialPositions: "random",
                         },
                         dataLabels: {
                             enabled: true,
@@ -164,6 +176,5 @@ export default {
 </script>
 
 <style scoped>
-
 
 </style>

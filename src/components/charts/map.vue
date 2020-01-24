@@ -11,9 +11,13 @@ export default {
             mapOptions: {
                 chart: {
                     map: json,
-                    width: 800
+                    height: 700,
+                    width: 600,
+                    backgroundColor: 'transparent',
                 },
-
+                title: {
+                    text: 'Anzahl Straftaten pro Kreispolizeibehörde'
+                },
                 colorAxis: {
                     min: 0,
                     maxColor: '#700101',
@@ -104,7 +108,7 @@ export default {
                     color: '#700101',
                     states: {
                         hover: {
-                            color: "#700101"
+                            color: "white"
                         }
                     },
                     // dataLabels: {

@@ -9,7 +9,8 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'column'
+                    type: 'column',
+                    height: '625'
                 },
                 title: {
                     text: 'Altersverteilung der Tatverdächtigen'
@@ -27,6 +28,18 @@ export default {
                     title: {
                         text: 'Anzahl der Tatverdächtigen'
                     }
+                },
+                plotOptions: {
+                    series: {
+                            point: {
+                                events: {
+                                    legendItemClick: function () {
+                                        return false; // <== returning false will cancel the default action
+                                    }
+                                }
+                            }
+                        }
+                   
                 },
                 series: []
             }

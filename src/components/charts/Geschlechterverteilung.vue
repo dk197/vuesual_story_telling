@@ -1,5 +1,7 @@
 <template>
-    <highcharts :options="chartOptions"></highcharts>
+    <div class="chart-container">
+        <highcharts :options="chartOptions"></highcharts>
+    </div>
 </template>
 
 <script>
@@ -11,10 +13,11 @@ export default {
                 chart: {
                     type: 'pie',
                     backgroundColor: 'transparent',
-                    width: 500                
+                    height: '310',
+                    width: '450'
                 },
                 title: {
-                    text: 'Geschlechterverteilung der Tatverdächtigen'
+                    text: ''
                 },
                 tooltip: {
                     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -22,12 +25,15 @@ export default {
                 legend: {
                     layout: 'vertical',
                     align: 'right',
-                    verticalAlign: 'middle'
+                    verticalAlign: 'middle',
+                    margin: 0,
+                    itemWidth: '120'
                 },
                 plotOptions: {
                     pie: {
                         allowPointSelect: true,
                         cursor: 'pointer',
+                        borderColor: 'black',
                         dataLabels: {
                             enabled: true,
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
@@ -41,8 +47,18 @@ export default {
                                 value: 4
                             }
                         },
-                        showInLegend: true
-                    }
+                        showInLegend: true,
+                    },
+                    series: {
+                            point: {
+                                events: {
+                                    legendItemClick: function () {
+                                        return false; // <== returning false will cancel the default action
+                                    }
+                                }
+                            }
+                        }
+                   
                 },
                 series: []
             }
@@ -78,4 +94,7 @@ export default {
 </script>
 
 <style scoped>
+    .chart-container {
+        width: 450px;
+    }
 </style>

@@ -9,7 +9,8 @@ export default {
         return {
             chartOptions: {
                 chart: {
-                    type: 'column'
+                    type: 'column',
+                    height: '625'
                 },
                 title: {
                     text: 'Straftaten der Mehrfachtäter'
