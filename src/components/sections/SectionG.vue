@@ -267,9 +267,7 @@ export default {
     },
     created() {
         EventBus.$on('mapSelected', value => {
-            console.log(value);
             this.selectedSection = value
-            // value = 'test'
             value = value.replace(/\s/g, '');
             value = value.replace(/-/g, '');
 
@@ -280,13 +278,11 @@ export default {
             this.series = [
                 {
                     name: 'Straftaten',
-                    // data: [this.tableData[value].straft.year1, this.tableData[value].tatverd.year1]
                     data: this.tableData[value].row1,
                     color: '#700101'
                 },
                 {
                     name: 'Tatverdächtige',
-                    // data: [this.tableData[value].straft.year2, this.tableData[value].tatverd.year2]
                     data: this.tableData[value].row2,
                     color: '#1A1A1A'
                 }
@@ -296,11 +292,6 @@ export default {
 
             document.getElementById('img').style.opacity = '0';
         })
-    },
-    methods: {
-        getDataOfBezirk(bezirk) {
-            console.log(this.tableData[bezirk]);
-        }
     }
 };
 </script>

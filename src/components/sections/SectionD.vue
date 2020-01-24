@@ -69,7 +69,6 @@ export default {
     },
     created() {
         EventBus.$on('sectionChange', value => {
-            console.log(value);
             if(value.destination === 'page5') {
                 document.getElementById('cap1').style.transform = 'scale(1.0)';
                 document.getElementById('cap2').style.transform = 'scale(1.0)';

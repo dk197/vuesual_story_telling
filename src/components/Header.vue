@@ -23,20 +23,6 @@ export default {
         return {
             counter: 1
         }
-    },
-    created(){
-        //this.animateValue()
-    },
-    methods:{
-        // animateValue(){
-        //     setInterval(function(){
-        //         alert(this.counter);
-        //         this.counter = this.counter + 1;    
-        //     },5)
-        //     //setTimeout(function(){ alert("Hello"); }, 3000);
-
-        // }
-
     }
 };
 
@@ -175,9 +161,5 @@ p, h2, h3 {
     /* z-index: 100; */
     border-bottom-left-radius: 0;
     transform-origin: top left;
-}
-
-.overlay2 {
-
 }
 </style>
