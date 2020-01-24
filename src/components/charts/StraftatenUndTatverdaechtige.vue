@@ -13,7 +13,8 @@ export default {
                 chart: {
                     type: 'column',
                     height: 400,
-                    width: 380
+                    width: 380,
+                    backgroundColor: 'transparent'
                 },
                 title: {
                     text: 'Straftaten und Tatverdächtige im zeitlichem Verlauf'

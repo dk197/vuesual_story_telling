@@ -72,10 +72,8 @@ function animateValue(id, start, end, duration) {
     run();
 }
 
-window.onload = function () {
-        //console.log('lol');
-        
-        animateValue('counting-number', 0, 14225, 2500);
+window.onload = function () {        
+        animateValue('counting-number', 0, 14225, 1000);
     }
 
 

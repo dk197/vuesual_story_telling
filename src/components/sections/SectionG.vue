@@ -1,7 +1,7 @@
 <template>
     <Wrapper>
-        <div class="test1">
-            <img class="test" src="./test.svg">
+        <div class="background1">
+            <img class="background" src="../../assets/map.svg">
         <h2 class="heading">Brennpunkte in NRW</h2>
         <div class="map-wrapper">
             <Map></Map>
@@ -19,13 +19,16 @@
                 Bewegen Sie Ihre Maus über das <br>
                 Diagramm für genauere Informationen. <br>
 
-                <img src="../../assets/note.svg">
+                <img id="img" src="../../assets/note.svg">
             </div>
             <div class="chart">
                 <StraftatenUndTatverdaechtige v-show="showBarChart" :series="series"></StraftatenUndTatverdaechtige>
             </div>
+            
         </div>
+        
         </div>
+        <div class="shape-white"> </div>
     </Wrapper>
 </template>
 
@@ -263,15 +266,12 @@ export default {
     },
     created() {
         EventBus.$on('mapSelected', value => {
-            console.log(value);
-            // value = 'test'
             value = value.replace(/\s/g, '');
             value = value.replace(/-/g, '');
 
             if(value.includes('-')) {
                 value = value.replace(/-/g, '_');
             }
-            console.log(value);
 
             this.series = [
                 {
@@ -289,6 +289,8 @@ export default {
             ]
             this.showBarChart = true
             this.currentComponent = 'EmptyTestComponent'
+
+            document.getElementById('img').style.opacity = '0';
         })
     },
     methods: {
@@ -315,21 +317,35 @@ export default {
 
 .text {
     position: relative;
-    z-index: -999;
+    z-index: -97;
 }
-.test1 {
+.background1 {
     position: relative;
 }
-.test {
+.background {
     position: absolute;
     height: 1990px;
     transform: rotate(-1deg);
     top: -455px;
     left: 12px;
+    z-index: -99;
+    opacity: 0.3;
 }
 .text > img {
     position: absolute;
     bottom: -50%;
+    
+}
+
+.shape-white {
+    position: absolute;
+    right: 100px;
+    top:0;
+    width: 400px;
+    height: 1000px;
+    background-color: white;
+    z-index: -98;
+    opacity: 0.7
 }
 
 </style>
