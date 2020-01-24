@@ -3,7 +3,7 @@
         <div class="overlay"></div>
         <div class="footer-content">
             <p class="footer-title">Quelle</p>
-            <p class="text red"><strong>Clankriminalität - Lagebild NRW</strong></p>
+            <p class="text"><strong>Clankriminalität - Lagebild NRW</strong></p>
             <p class="text"> 
                     Polizei Nordrhein-Westfalen<br>
                     Landeskriminalamt Nordrhein-Westfalen <br>
@@ -99,12 +99,6 @@ p, h2, h3 {
     font-size: 18px;   
     margin-top: none
 }
-
-.red {
-    color: #700101;
-    font-size: 22px;
-}
-
 .source {
     font-size: 15px;
 }
