@@ -90,6 +90,14 @@ export default {
 			EventBus.$emit('slideChange', event)
 			/*eslint no-unused-vars: 0*/
         }
+    },
+    mounted() {
+        const x = document.body.children
+        x.forEach(element => {
+            if(element.innerHTML.substring(0, 31) === '<a href="http://alvarotrigo.com') {
+                element.style.display = 'none'
+            }
+        });
     }
 };
 </script>
